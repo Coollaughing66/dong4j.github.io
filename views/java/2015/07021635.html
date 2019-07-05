@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>log4j.properties 配置说明 | Black House</title>
+    <meta name="description" content="代码千万行, 注释第一行, 编码不规范, 同事两行泪.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.35477964.css" as="style"><link rel="preload" href="/assets/js/app.23d4d300.js" as="script"><link rel="preload" href="/assets/js/4.28fd9624.js" as="script"><link rel="preload" href="/assets/js/1.928d15b1.js" as="script"><link rel="preload" href="/assets/js/35.457382a4.js" as="script"><link rel="prefetch" href="/assets/js/10.c2349238.js"><link rel="prefetch" href="/assets/js/100.031b764c.js"><link rel="prefetch" href="/assets/js/11.597103f4.js"><link rel="prefetch" href="/assets/js/12.01e326a5.js"><link rel="prefetch" href="/assets/js/13.6937eabc.js"><link rel="prefetch" href="/assets/js/14.0e95ab13.js"><link rel="prefetch" href="/assets/js/15.43c0e778.js"><link rel="prefetch" href="/assets/js/16.8c75ae64.js"><link rel="prefetch" href="/assets/js/17.02d12878.js"><link rel="prefetch" href="/assets/js/18.6b597676.js"><link rel="prefetch" href="/assets/js/19.524d893b.js"><link rel="prefetch" href="/assets/js/20.11686f52.js"><link rel="prefetch" href="/assets/js/21.ad025f0d.js"><link rel="prefetch" href="/assets/js/22.dca96777.js"><link rel="prefetch" href="/assets/js/23.121a28ab.js"><link rel="prefetch" href="/assets/js/24.99537c05.js"><link rel="prefetch" href="/assets/js/25.8f31fa14.js"><link rel="prefetch" href="/assets/js/26.a121c6cc.js"><link rel="prefetch" href="/assets/js/27.a57ec579.js"><link rel="prefetch" href="/assets/js/28.3f009b45.js"><link rel="prefetch" href="/assets/js/29.9c269e5b.js"><link rel="prefetch" href="/assets/js/30.168f09f3.js"><link rel="prefetch" href="/assets/js/31.ed454542.js"><link rel="prefetch" href="/assets/js/32.5f77ac76.js"><link rel="prefetch" href="/assets/js/33.3b921274.js"><link rel="prefetch" href="/assets/js/34.2e2dd8bc.js"><link rel="prefetch" href="/assets/js/36.097474f8.js"><link rel="prefetch" href="/assets/js/37.2914dab3.js"><link rel="prefetch" href="/assets/js/38.bd900eff.js"><link rel="prefetch" href="/assets/js/39.00b0bb76.js"><link rel="prefetch" href="/assets/js/40.6d5aae82.js"><link rel="prefetch" href="/assets/js/41.e00929aa.js"><link rel="prefetch" href="/assets/js/42.b0c12805.js"><link rel="prefetch" href="/assets/js/43.7a60ce77.js"><link rel="prefetch" href="/assets/js/44.adf74ab9.js"><link rel="prefetch" href="/assets/js/45.36b6b8e2.js"><link rel="prefetch" href="/assets/js/46.a254f56a.js"><link rel="prefetch" href="/assets/js/47.aec9ad68.js"><link rel="prefetch" href="/assets/js/48.e3477ba7.js"><link rel="prefetch" href="/assets/js/49.5d974cde.js"><link rel="prefetch" href="/assets/js/5.c7e63593.js"><link rel="prefetch" href="/assets/js/50.c71471a2.js"><link rel="prefetch" href="/assets/js/51.de15920e.js"><link rel="prefetch" href="/assets/js/52.1eabf9c1.js"><link rel="prefetch" href="/assets/js/53.ada4082c.js"><link rel="prefetch" href="/assets/js/54.985c146e.js"><link rel="prefetch" href="/assets/js/55.33da5078.js"><link rel="prefetch" href="/assets/js/56.8b899006.js"><link rel="prefetch" href="/assets/js/57.f7ea6441.js"><link rel="prefetch" href="/assets/js/58.55ca22b7.js"><link rel="prefetch" href="/assets/js/59.3b16a882.js"><link rel="prefetch" href="/assets/js/6.8843ac12.js"><link rel="prefetch" href="/assets/js/60.7365ec6c.js"><link rel="prefetch" href="/assets/js/61.0508510a.js"><link rel="prefetch" href="/assets/js/62.8c3a0bf0.js"><link rel="prefetch" href="/assets/js/63.99503945.js"><link rel="prefetch" href="/assets/js/64.1193b17d.js"><link rel="prefetch" href="/assets/js/65.40a7b476.js"><link rel="prefetch" href="/assets/js/66.c95c74fb.js"><link rel="prefetch" href="/assets/js/67.dcc1ce00.js"><link rel="prefetch" href="/assets/js/68.e8aeba6d.js"><link rel="prefetch" href="/assets/js/69.13b69234.js"><link rel="prefetch" href="/assets/js/7.cda98f34.js"><link rel="prefetch" href="/assets/js/70.2308210c.js"><link rel="prefetch" href="/assets/js/71.bdac7c88.js"><link rel="prefetch" href="/assets/js/72.d5e7dabc.js"><link rel="prefetch" href="/assets/js/73.f1cec72d.js"><link rel="prefetch" href="/assets/js/74.13cbda62.js"><link rel="prefetch" href="/assets/js/75.5ec77696.js"><link rel="prefetch" href="/assets/js/76.e80c98fb.js"><link rel="prefetch" href="/assets/js/77.edf10bf3.js"><link rel="prefetch" href="/assets/js/78.9472aec2.js"><link rel="prefetch" href="/assets/js/79.2f59f6d2.js"><link rel="prefetch" href="/assets/js/8.64e66a3d.js"><link rel="prefetch" href="/assets/js/80.9d9b311d.js"><link rel="prefetch" href="/assets/js/81.112c831f.js"><link rel="prefetch" href="/assets/js/82.e98222ae.js"><link rel="prefetch" href="/assets/js/83.a7741563.js"><link rel="prefetch" href="/assets/js/84.47f9ec86.js"><link rel="prefetch" href="/assets/js/85.4b288089.js"><link rel="prefetch" href="/assets/js/86.d01d1b2a.js"><link rel="prefetch" href="/assets/js/87.26f71539.js"><link rel="prefetch" href="/assets/js/88.0cdca4ad.js"><link rel="prefetch" href="/assets/js/89.fca9f86b.js"><link rel="prefetch" href="/assets/js/9.8fcc4a9b.js"><link rel="prefetch" href="/assets/js/90.49e1e9ad.js"><link rel="prefetch" href="/assets/js/91.58ec2d07.js"><link rel="prefetch" href="/assets/js/92.0da2a72c.js"><link rel="prefetch" href="/assets/js/93.9d312aaf.js"><link rel="prefetch" href="/assets/js/94.e94db684.js"><link rel="prefetch" href="/assets/js/95.ed2aa34a.js"><link rel="prefetch" href="/assets/js/96.6a2e264d.js"><link rel="prefetch" href="/assets/js/97.8a055f18.js"><link rel="prefetch" href="/assets/js/98.1284385e.js"><link rel="prefetch" href="/assets/js/99.830ddc7a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3ceaf8af.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35477964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="Black House" class="logo"> <span class="site-name">Black House</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>log4j.properties 配置说明</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/java/2015/07021635.html#参数意义说明" class="sidebar-link">参数意义说明</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#输出级别的种类" class="sidebar-link">输出级别的种类</a></li><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#配置日志信息输出目的地" class="sidebar-link">配置日志信息输出目的地</a></li><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#配置日志信息的格式" class="sidebar-link">配置日志信息的格式</a></li><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#控制台选项" class="sidebar-link">控制台选项</a></li><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#日志信息格式中几个符号所代表的含义" class="sidebar-link">日志信息格式中几个符号所代表的含义:</a></li></ul></li><li><a href="/views/java/2015/07021635.html#文件配置-sample1" class="sidebar-link">文件配置 Sample1</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/java/2015/07021635.html#文件配置-sample2" class="sidebar-link">文件配置 Sample2</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#高级使用" class="sidebar-link">高级使用</a></li><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#发送email通知管理员" class="sidebar-link">发送email通知管理员</a></li><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#在后台输出所有类别的错误" class="sidebar-link">在后台输出所有类别的错误</a></li><li class="sidebar-sub-header"><a href="/views/java/2015/07021635.html#全部代码-log4jtest-java" class="sidebar-link">全部代码: Log4jTest.java</a></li></ul></li></ul></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>log4j.properties 配置说明</h1> <hr> <div data-v-0b496ca7><i class="iconfont reco-account" data-v-0b496ca7><span data-v-0b496ca7>dong4j</span></i> <i class="iconfont reco-date" data-v-0b496ca7><span data-v-0b496ca7>7/21/2015</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0b496ca7><span class="tag-item" data-v-0b496ca7>
+      JavaSE
+    </span></i></div></div> <div class="content__default"><div class="tip custom-block"><p>日志相关配置说明</p></div> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment">### set log levels ###</span>
+log4j.rootLogger <span class="token operator">=</span> debug ,  stdout ,  D ,  E
+
+<span class="token comment">### 输出到控制台 ###</span>
+log4j.appender.stdout <span class="token operator">=</span> org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.Target <span class="token operator">=</span> System.out
+log4j.appender.stdout.layout <span class="token operator">=</span> org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern <span class="token operator">=</span>  %d<span class="token punctuation">{</span>ABSOLUTE<span class="token punctuation">}</span> %5p %c<span class="token punctuation">{</span> 1 <span class="token punctuation">}</span>:%L - %m%n
+
+<span class="token comment">### 输出到日志文件 ###</span>
+log4j.appender.D <span class="token operator">=</span> org.apache.log4j.DailyRollingFileAppender
+log4j.appender.D.File <span class="token operator">=</span> logs/log.log
+log4j.appender.D.Append <span class="token operator">=</span> <span class="token boolean">true</span>
+log4j.appender.D.Threshold <span class="token operator">=</span> DEBUG <span class="token comment">## 输出DEBUG级别以上的日志</span>
+log4j.appender.D.layout <span class="token operator">=</span> org.apache.log4j.PatternLayout
+log4j.appender.D.layout.ConversionPattern <span class="token operator">=</span> %-d<span class="token punctuation">{</span>yyyy-MM-dd HH:mm:ss<span class="token punctuation">}</span>  <span class="token punctuation">[</span> %t:%r <span class="token punctuation">]</span> - <span class="token punctuation">[</span> %p <span class="token punctuation">]</span>  %m%n
+
+<span class="token comment">### 保存异常信息到单独文件 ###</span>
+log4j.appender.D <span class="token operator">=</span> org.apache.log4j.DailyRollingFileAppender
+log4j.appender.D.File <span class="token operator">=</span> logs/error.log <span class="token comment">## 异常日志文件名</span>
+log4j.appender.D.Append <span class="token operator">=</span> <span class="token boolean">true</span>
+log4j.appender.D.Threshold <span class="token operator">=</span> ERROR <span class="token comment">## 只输出ERROR级别以上的日志!!!</span>
+log4j.appender.D.layout <span class="token operator">=</span> org.apache.log4j.PatternLayout
+log4j.appender.D.layout.ConversionPattern <span class="token operator">=</span> %-d<span class="token punctuation">{</span>yyyy-MM-dd HH:mm:ss<span class="token punctuation">}</span>  <span class="token punctuation">[</span> %t:%r <span class="token punctuation">]</span> - <span class="token punctuation">[</span> %p <span class="token punctuation">]</span>  %m%n
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h2 id="参数意义说明"><a href="#参数意义说明" aria-hidden="true" class="header-anchor">#</a> 参数意义说明</h2> <h3 id="输出级别的种类"><a href="#输出级别的种类" aria-hidden="true" class="header-anchor">#</a> 输出级别的种类</h3> <p><code>ERROR、WARN、INFO、DEBUG</code></p> <ol><li>ERROR 为严重错误 主要是程序的错误</li> <li>WARN 为一般警告, 比如session丢失</li> <li>INFO 为一般要显示的信息, 比如登录登出</li> <li>DEBUG 为程序的调试信息</li></ol> <h3 id="配置日志信息输出目的地"><a href="#配置日志信息输出目的地" aria-hidden="true" class="header-anchor">#</a> 配置日志信息输出目的地</h3> <p><code>log4j.appender.appenderName = fully.qualified.name.of.appender.class</code></p> <ol><li>org.apache.log4j.ConsoleAppender（控制台）</li> <li>org.apache.log4j.FileAppender（文件）</li> <li>org.apache.log4j.DailyRollingFileAppender（每天产生一个日志文件）</li> <li>org.apache.log4j.RollingFileAppender（文件大小到达指定尺寸的时候产生一个新的文件）</li> <li>org.apache.log4j.WriterAppender（将日志信息以流格式发送到任意指定的地方）</li></ol> <h3 id="配置日志信息的格式"><a href="#配置日志信息的格式" aria-hidden="true" class="header-anchor">#</a> 配置日志信息的格式</h3> <p><code>log4j.appender.appenderName.layout =fully.qualified.name.of.layout.class</code></p> <ol><li>org.apache.log4j.HTMLLayout（以HTML表格形式布局）,</li> <li>org.apache.log4j.PatternLayout（可以灵活地指定布局模式）,</li> <li>org.apache.log4j.SimpleLayout（包含日志信息的级别和信息字符串）,</li> <li>org.apache.log4j.TTCCLayout（包含日志产生的时间、线程、类别等等信息）</li></ol> <h3 id="控制台选项"><a href="#控制台选项" aria-hidden="true" class="header-anchor">#</a> 控制台选项</h3> <p>Threshold=DEBUG: 指定日志消息的输出最低层次.
+ImmediateFlush=true: 默认值是true,意谓着所有的消息都会被立即输出.
+Target=System.err: 默认情况下是: System.out,指定输出控制台</p> <h4 id="fileappender-选项"><a href="#fileappender-选项" aria-hidden="true" class="header-anchor">#</a> FileAppender 选项</h4> <p>Threshold=DEBUF: 指定日志消息的输出最低层次.
+ImmediateFlush=true: 默认值是true,意谓着所有的消息都会被立即输出.
+File=mylog.txt: 指定消息输出到mylog.txt文件.
+Append=false: 默认值是true,即将消息增加到指定文件中, false指将消息覆盖指定的文件内容.</p> <h4 id="rollingfileappender-选项"><a href="#rollingfileappender-选项" aria-hidden="true" class="header-anchor">#</a> RollingFileAppender 选项</h4> <p>Threshold=DEBUG: 指定日志消息的输出最低层次.
+ImmediateFlush=true: 默认值是true,意谓着所有的消息都会被立即输出.
+File=mylog.txt: 指定消息输出到mylog.txt文件.
+Append=false: 默认值是true,即将消息增加到指定文件中, false指将消息覆盖指定的文件内容.
+MaxFileSize=100KB: 后缀可以是KB, MB 或者是 GB. 在日志文件到达该大小时, 将会自动滚动, 即将原来的内容移到mylog.log.1文件.
+MaxBackupIndex=2: 指定可以产生的滚动文件的最大数.</p> <p><code>log4j.appender.A1.layout.ConversionPattern=%-4r %-5p %d{yyyy-MM-dd HH:mm:ssS} %c %m%n</code></p> <h3 id="日志信息格式中几个符号所代表的含义"><a href="#日志信息格式中几个符号所代表的含义" aria-hidden="true" class="header-anchor">#</a> 日志信息格式中几个符号所代表的含义:</h3> <p>-X号: X信息输出时左对齐；
+%p: 输出日志信息优先级, 即DEBUG, INFO, WARN, ERROR, FATAL,
+%d: 输出日志时间点的日期或时间, 默认格式为ISO8601, 也可以在其后指定格式, 比如: %d{yyy MMM dd HH:mm:ss,SSS}, 输出类似: 2002年10月18日 22: 10: 28, 921
+%r: 输出自应用启动到输出该log信息耗费的毫秒数
+%c: 输出日志信息所属的类目, 通常就是所在类的全名
+%t: 输出产生该日志事件的线程名
+%l: 输出日志事件的发生位置, 相当于%C.%M(%F:%L)的组合,包括类目名、发生的线程, 以及在代码中的行数. 举例: Testlog4.main (TestLog4.java:10)
+%x: 输出和当前线程相关联的NDC(嵌套诊断环境),尤其用到像java servlets这样的多客户多线程的应用中.
+%%: 输出一个&quot;%&quot;字符
+%F: 输出日志消息产生时所在的文件名称
+%L: 输出代码中的行号
+%m: 输出代码中指定的消息,产生的日志具体信息
+%n: 输出一个回车换行符, Windows平台为&quot;/r/n&quot;, Unix平台为&quot;/n&quot;输出日志信息换行</p> <p>可以在%与模式字符之间加上修饰符来控制其最小宽度、最大宽度、和文本的对齐方式. 如:</p> <ol><li>%20c: 指定输出category的名称, 最小的宽度是20, 如果category的名称小于20的话, 默认的情况下右对齐.</li> <li>%-20c:指定输出category的名称, 最小的宽度是20, 如果category的名称小于20的话, &quot;-&quot;号指定左对齐.</li> <li>%.30c:指定输出category的名称, 最大的宽度是30, 如果category的名称大于30的话, 就会将左边多出的字符截掉, 但小于30的话也不会有空格.</li> <li>%20.30c:如果category的名称小于20就补空格, 并且右对齐, 如果其名称长于30字符, 就从左边较远输出的字符截掉.</li></ol> <h2 id="文件配置-sample1"><a href="#文件配置-sample1" aria-hidden="true" class="header-anchor">#</a> 文件配置 Sample1</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>log4j.rootLogger<span class="token operator">=</span>DEBUG,A1,R
+<span class="token comment"># ConsoleAppender 输出</span>
+log4j.appender.A1<span class="token operator">=</span>org.apache.log4j.ConsoleAppender
+log4j.appender.A1.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern<span class="token operator">=</span>%-d<span class="token punctuation">{</span>yyyy-MM-dd HH:mm:ss,SSS<span class="token punctuation">}</span> <span class="token punctuation">[</span>%c<span class="token punctuation">]</span>-<span class="token punctuation">[</span>%p<span class="token punctuation">]</span> %m%n
+<span class="token comment"># File 输出 一天一个文件,输出路径可以定制,一般在根路径下</span>
+log4j.appender.R<span class="token operator">=</span>org.apache.log4j.DailyRollingFileAppender
+log4j.appender.R.File<span class="token operator">=</span>blog_log.txt
+log4j.appender.R.MaxFileSize<span class="token operator">=</span>500KB
+log4j.appender.R.MaxBackupIndex<span class="token operator">=</span>10
+log4j.appender.R.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout
+log4j.appender.R.layout.ConversionPattern<span class="token operator">=</span>%d<span class="token punctuation">{</span>yyyy-MM-dd HH:mm:ss,SSS<span class="token punctuation">}</span> <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> <span class="token punctuation">[</span>%c<span class="token punctuation">]</span> <span class="token punctuation">[</span>%p<span class="token punctuation">]</span> - %m%n
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="文件配置-sample2"><a href="#文件配置-sample2" aria-hidden="true" class="header-anchor">#</a> 文件配置 Sample2</h2> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>下面给出的Log4J配置文件实现了输出到控制台, 文件, 回滚文件, 发送日志邮件, 输出到数据库日志表, 自定义标签等全套功能. 
+log4j.rootLogger<span class="token operator">=</span>DEBUG,CONSOLE,A1,im 
+<span class="token comment">#DEBUG,CONSOLE,FILE,ROLLING_FILE,MAIL,DATABASE</span>
+log4j.addivity.org.apache<span class="token operator">=</span>true
+<span class="token comment">################### </span>
+<span class="token comment"># Console Appender </span>
+<span class="token comment">################### </span>
+log4j.appender.CONSOLE<span class="token operator">=</span>org.apache.log4j.ConsoleAppender 
+log4j.appender.Threshold<span class="token operator">=</span>DEBUG 
+log4j.appender.CONSOLE.Target<span class="token operator">=</span>System.out 
+log4j.appender.CONSOLE.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout 
+log4j.appender.CONSOLE.layout.ConversionPattern<span class="token operator">=</span><span class="token punctuation">[</span>framework<span class="token punctuation">]</span> %d - %c -%-4r <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %-5p %c %x - %m%n 
+<span class="token comment">#log4j.appender.CONSOLE.layout.ConversionPattern=[start]%d{DATE}[DATE]%n%p[PRIORITY]%n%x[NDC]%n%t[THREAD] n%c[CATEGORY]%n%m[MESSAGE]%n%n</span>
+<span class="token comment">##################### </span>
+<span class="token comment"># File Appender </span>
+<span class="token comment">##################### </span>
+log4j.appender.FILE<span class="token operator">=</span>org.apache.log4j.FileAppender 
+log4j.appender.FILE.File<span class="token operator">=</span>file.log 
+log4j.appender.FILE.Append<span class="token operator">=</span>false 
+log4j.appender.FILE.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout 
+log4j.appender.FILE.layout.ConversionPattern<span class="token operator">=</span><span class="token punctuation">[</span>framework<span class="token punctuation">]</span> %d - %c -%-4r <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %-5p %c %x - %m%n 
+<span class="token comment"># Use this layout for LogFactor 5 analysis</span>
+<span class="token comment">######################## </span>
+<span class="token comment"># Rolling File </span>
+<span class="token comment">######################## </span>
+log4j.appender.ROLLING_FILE<span class="token operator">=</span>org.apache.log4j.RollingFileAppender 
+log4j.appender.ROLLING_FILE.Threshold<span class="token operator">=</span>ERROR 
+log4j.appender.ROLLING_FILE.File<span class="token operator">=</span>rolling.log 
+log4j.appender.ROLLING_FILE.Append<span class="token operator">=</span>true 
+log4j.appender.ROLLING_FILE.MaxFileSize<span class="token operator">=</span>10KB 
+log4j.appender.ROLLING_FILE.MaxBackupIndex<span class="token operator">=</span>1 
+log4j.appender.ROLLING_FILE.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout 
+log4j.appender.ROLLING_FILE.layout.ConversionPattern<span class="token operator">=</span><span class="token punctuation">[</span>framework<span class="token punctuation">]</span> %d - %c -%-4r <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %-5p %c %x - %m%n
+<span class="token comment">#################### </span>
+<span class="token comment"># Socket Appender </span>
+<span class="token comment">#################### </span>
+log4j.appender.SOCKET<span class="token operator">=</span>org.apache.log4j.RollingFileAppender 
+log4j.appender.SOCKET.RemoteHost<span class="token operator">=</span>localhost 
+log4j.appender.SOCKET.Port<span class="token operator">=</span>5001 
+log4j.appender.SOCKET.LocationInfo<span class="token operator">=</span>true 
+<span class="token comment"># Set up for Log Facter 5 </span>
+log4j.appender.SOCKET.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout 
+log4j.appender.SOCET.layout.ConversionPattern<span class="token operator">=</span><span class="token punctuation">[</span>start<span class="token punctuation">]</span>%d<span class="token punctuation">{</span>DATE<span class="token punctuation">}</span><span class="token punctuation">[</span>DATE<span class="token punctuation">]</span>%n%p<span class="token punctuation">[</span>PRIORITY<span class="token punctuation">]</span>%n%x<span class="token punctuation">[</span>NDC<span class="token punctuation">]</span>%n%t<span class="token punctuation">[</span>THREAD<span class="token punctuation">]</span>%n%c<span class="token punctuation">[</span>CATEGORY<span class="token punctuation">]</span>%n%m<span class="token punctuation">[</span>MESSAGE<span class="token punctuation">]</span>%n%n
+<span class="token comment">######################## </span>
+<span class="token comment"># Log Factor 5 Appender </span>
+<span class="token comment">######################## </span>
+log4j.appender.LF5_APPENDER<span class="token operator">=</span>org.apache.log4j.lf5.LF5Appender 
+log4j.appender.LF5_APPENDER.MaxNumberOfRecords<span class="token operator">=</span>2000
+<span class="token comment">######################## </span>
+<span class="token comment"># SMTP Appender </span>
+<span class="token comment">####################### </span>
+log4j.appender.MAIL<span class="token operator">=</span>org.apache.log4j.net.SMTPAppender 
+log4j.appender.MAIL.Threshold<span class="token operator">=</span>FATAL 
+log4j.appender.MAIL.BufferSize<span class="token operator">=</span>10 
+log4j.appender.MAIL.From<span class="token operator">=</span>chenyl@yeqiangwei.com
+log4j.appender.MAIL.SMTPHost<span class="token operator">=</span>mail.hollycrm.com 
+log4j.appender.MAIL.Subject<span class="token operator">=</span>Log4J Message 
+log4j.appender.MAIL.To<span class="token operator">=</span>chenyl@yeqiangwei.com
+log4j.appender.MAIL.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout 
+log4j.appender.MAIL.layout.ConversionPattern<span class="token operator">=</span><span class="token punctuation">[</span>framework<span class="token punctuation">]</span> %d - %c -%-4r <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %-5p %c %x - %m%n
+<span class="token comment">######################## </span>
+<span class="token comment"># JDBC Appender </span>
+<span class="token comment">####################### </span>
+log4j.appender.DATABASE<span class="token operator">=</span>org.apache.log4j.jdbc.JDBCAppender 
+log4j.appender.DATABASE.URL<span class="token operator">=</span>jdbc:mysql://localhost:3306/test 
+log4j.appender.DATABASE.driver<span class="token operator">=</span>com.mysql.jdbc.Driver 
+log4j.appender.DATABASE.user<span class="token operator">=</span>root 
+log4j.appender.DATABASE.password<span class="token operator">=</span> 
+log4j.appender.DATABASE.sql<span class="token operator">=</span>INSERT INTO LOG4J <span class="token punctuation">(</span>Message<span class="token punctuation">)</span> VALUES <span class="token punctuation">(</span><span class="token string">'[framework] %d - %c -%-4r [%t] %-5p %c %x - %m%n'</span><span class="token punctuation">)</span> 
+log4j.appender.DATABASE.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout 
+log4j.appender.DATABASE.layout.ConversionPattern<span class="token operator">=</span><span class="token punctuation">[</span>framework<span class="token punctuation">]</span> %d - %c -%-4r <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %-5p %c %x - %m%n
+log4j.appender.A1<span class="token operator">=</span>org.apache.log4j.DailyRollingFileAppender 
+log4j.appender.A1.File<span class="token operator">=</span>SampleMessages.log4j 
+log4j.appender.A1.DatePattern<span class="token operator">=</span>yyyyMMdd-HH<span class="token string">'.log4j'</span> 
+log4j.appender.A1.layout<span class="token operator">=</span>org.apache.log4j.xml.XMLLayout
+<span class="token comment">################### </span>
+<span class="token comment">#自定义Appender </span>
+<span class="token comment">################### </span>
+log4j.appender.im <span class="token operator">=</span> net.cybercorlin.util.logger.appender.IMAppender
+log4j.appender.im.host <span class="token operator">=</span> mail.cybercorlin.net 
+log4j.appender.im.username <span class="token operator">=</span> username 
+log4j.appender.im.password <span class="token operator">=</span> password 
+log4j.appender.im.recipient <span class="token operator">=</span> corlin@yeqiangwei.com
+log4j.appender.im.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout 
+log4j.appender.im.layout.ConversionPattern <span class="token operator">=</span><span class="token punctuation">[</span>framework<span class="token punctuation">]</span> %d - %c -%-4r <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %-5p %c %x - %m%n
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br></div></div><h3 id="高级使用"><a href="#高级使用" aria-hidden="true" class="header-anchor">#</a> 高级使用</h3> <p>实验目的:</p> <ol><li>把FATAL级错误写入2000NT日志</li> <li>WARN, ERROR, FATAL级错误发送email通知管理员
+3.其他级别的错误直接在后台输出</li></ol> <p>实验步骤:</p> <p>输出到2000NT日志</p> <ol><li>把Log4j压缩包里的NTEventLogAppender.dll拷到WINNT/SYSTEM32目录下</li> <li>写配置文件log4j.properties</li></ol> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 在2000系统日志输出</span>
+log4j.logger.NTlog<span class="token operator">=</span>FATAL, A8
+<span class="token comment"># APPENDER A8</span>
+log4j.appender.A8<span class="token operator">=</span>org.apache.log4j.nt.NTEventLogAppender
+log4j.appender.A8.Source<span class="token operator">=</span>JavaTest
+log4j.appender.A8.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout
+log4j.appender.A8.layout.ConversionPattern<span class="token operator">=</span>%-4r %-5p <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %37c %3x - %m%n
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>3.调用代码:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Logger logger2 <span class="token operator">=</span> Logger.getLogger<span class="token punctuation">(</span><span class="token string">&quot;NTlog&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span> //要和配置文件中设置的名字相同
+logger2.debug<span class="token punctuation">(</span><span class="token string">&quot;debug!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger2.info<span class="token punctuation">(</span><span class="token string">&quot;info!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger2.warn<span class="token punctuation">(</span><span class="token string">&quot;warn!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger2.error<span class="token punctuation">(</span><span class="token string">&quot;error!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+//只有这个错误才会写入2000日志
+logger2.fatal<span class="token punctuation">(</span><span class="token string">&quot;fatal!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="发送email通知管理员"><a href="#发送email通知管理员" aria-hidden="true" class="header-anchor">#</a> 发送email通知管理员</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">// 1. 首先下载JavaMail和JAF, </span>
+http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>java<span class="token punctuation">.</span>sun<span class="token punctuation">.</span>com<span class="token operator">/</span>j2ee<span class="token operator">/</span>ja<span class="token operator">/</span>javamail<span class="token operator">/</span>index<span class="token punctuation">.</span>html
+http<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>java<span class="token punctuation">.</span>sun<span class="token punctuation">.</span>com<span class="token operator">/</span>beans<span class="token operator">/</span>glasgow<span class="token operator">/</span>jaf<span class="token punctuation">.</span>html
+在项目中引用mail<span class="token punctuation">.</span>jar和activation<span class="token punctuation">.</span>jar<span class="token punctuation">.</span> 
+
+<span class="token comment">// 2. 写配置文件</span>
+# 将日志发送到email
+log4j<span class="token punctuation">.</span>logger<span class="token punctuation">.</span><span class="token class-name">MailLog</span><span class="token operator">=</span>WARN<span class="token punctuation">,</span>A5
+#  APPENDER A5
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token operator">=</span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span>net<span class="token punctuation">.</span><span class="token class-name">SMTPAppender</span>
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token punctuation">.</span><span class="token class-name">BufferSize</span><span class="token operator">=</span><span class="token number">5</span>
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token punctuation">.</span><span class="token class-name">To</span><span class="token operator">=</span>chunjie<span class="token annotation punctuation">@yeqiangwei</span><span class="token punctuation">.</span>com
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token punctuation">.</span><span class="token class-name">From</span><span class="token operator">=</span>error<span class="token annotation punctuation">@yeqiangwei</span><span class="token punctuation">.</span>com
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token punctuation">.</span><span class="token class-name">Subject</span><span class="token operator">=</span><span class="token class-name">ErrorLog</span>
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token punctuation">.</span><span class="token class-name">SMTPHost</span><span class="token operator">=</span>smtp<span class="token punctuation">.</span><span class="token number">263.</span>net
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token punctuation">.</span>layout<span class="token operator">=</span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span><span class="token class-name">PatternLayout</span>
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A5<span class="token punctuation">.</span>layout<span class="token punctuation">.</span><span class="token class-name">ConversionPattern</span><span class="token operator">=</span><span class="token operator">%</span><span class="token operator">-</span><span class="token number">4</span>r <span class="token operator">%</span><span class="token operator">-</span><span class="token number">5</span>p <span class="token punctuation">[</span><span class="token operator">%</span>t<span class="token punctuation">]</span> <span class="token operator">%</span><span class="token number">37</span>c <span class="token operator">%</span><span class="token number">3</span>x <span class="token operator">-</span> <span class="token operator">%</span>m<span class="token operator">%</span>n
+
+<span class="token comment">// 3.调用代码: 把日志发送到mail</span>
+<span class="token class-name">Logger</span> logger3 <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">&quot;MailLog&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger3<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">&quot;warn!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger3<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;error!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger3<span class="token punctuation">.</span><span class="token function">fatal</span><span class="token punctuation">(</span><span class="token string">&quot;fatal!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br></div></div><h3 id="在后台输出所有类别的错误"><a href="#在后台输出所有类别的错误" aria-hidden="true" class="header-anchor">#</a> 在后台输出所有类别的错误</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token number">1.</span> 写配置文件
+# 在后台输出
+log4j<span class="token punctuation">.</span>logger<span class="token punctuation">.</span>console<span class="token operator">=</span>DEBUG<span class="token punctuation">,</span> A1
+# APPENDER A1
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A1<span class="token operator">=</span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span><span class="token class-name">ConsoleAppender</span>
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A1<span class="token punctuation">.</span>layout<span class="token operator">=</span>org<span class="token punctuation">.</span>apache<span class="token punctuation">.</span>log4j<span class="token punctuation">.</span><span class="token class-name">PatternLayout</span>
+log4j<span class="token punctuation">.</span>appender<span class="token punctuation">.</span>A1<span class="token punctuation">.</span>layout<span class="token punctuation">.</span><span class="token class-name">ConversionPattern</span><span class="token operator">=</span><span class="token operator">%</span><span class="token operator">-</span><span class="token number">4</span>r <span class="token operator">%</span><span class="token operator">-</span><span class="token number">5</span>p <span class="token punctuation">[</span><span class="token operator">%</span>t<span class="token punctuation">]</span> <span class="token operator">%</span><span class="token number">37</span>c <span class="token operator">%</span><span class="token number">3</span>x <span class="token operator">-</span> <span class="token operator">%</span>m<span class="token operator">%</span>n
+<span class="token number">2</span>．调用代码
+<span class="token class-name">Logger</span> logger1 <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">&quot;console&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger1<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&quot;debug!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger1<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;info!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger1<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">&quot;warn!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger1<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;error!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+logger1<span class="token punctuation">.</span><span class="token function">fatal</span><span class="token punctuation">(</span><span class="token string">&quot;fatal!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p>全部配置文件: log4j.properties</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 在后台输出</span>
+log4j.logger.console<span class="token operator">=</span>DEBUG, A1
+<span class="token comment"># APPENDER A1</span>
+log4j.appender.A1<span class="token operator">=</span>org.apache.log4j.ConsoleAppender
+log4j.appender.A1.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern<span class="token operator">=</span>%-4r %-5p <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %37c %3x - %m%n
+<span class="token comment"># 在2000系统日志输出</span>
+log4j.logger.NTlog<span class="token operator">=</span>FATAL, A8
+<span class="token comment"># APPENDER A8</span>
+log4j.appender.A8<span class="token operator">=</span>org.apache.log4j.nt.NTEventLogAppender
+log4j.appender.A8.Source<span class="token operator">=</span>JavaTest
+log4j.appender.A8.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout
+log4j.appender.A8.layout.ConversionPattern<span class="token operator">=</span>%-4r %-5p <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %37c %3x - %m%n
+<span class="token comment"># 将日志发送到email</span>
+log4j.logger.MailLog<span class="token operator">=</span>WARN,A5
+<span class="token comment">#  APPENDER A5</span>
+log4j.appender.A5<span class="token operator">=</span>org.apache.log4j.net.SMTPAppender
+log4j.appender.A5.BufferSize<span class="token operator">=</span>5
+log4j.appender.A5.To<span class="token operator">=</span>chunjie@yeqiangwei.com
+log4j.appender.A5.From<span class="token operator">=</span>error@yeqiangwei.com
+log4j.appender.A5.Subject<span class="token operator">=</span>ErrorLog
+log4j.appender.A5.SMTPHost<span class="token operator">=</span>smtp.263.net
+log4j.appender.A5.layout<span class="token operator">=</span>org.apache.log4j.PatternLayout
+log4j.appender.A5.layout.ConversionPattern<span class="token operator">=</span>%-4r %-5p <span class="token punctuation">[</span>%t<span class="token punctuation">]</span> %37c %3x - %m%n
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br></div></div><h3 id="全部代码-log4jtest-java"><a href="#全部代码-log4jtest-java" aria-hidden="true" class="header-anchor">#</a> 全部代码: Log4jTest.java</h3> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">Log4jTest</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span> args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token class-name">PropertyConfigurator</span><span class="token punctuation">.</span><span class="token function">configure</span><span class="token punctuation">(</span><span class="token string">&quot;log4j.properties&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//在后台输出</span>
+        <span class="token class-name">Logger</span> logger1 <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">&quot;console&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger1<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&quot;debug!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger1<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;info!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger1<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">&quot;warn!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger1<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;error!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger1<span class="token punctuation">.</span><span class="token function">fatal</span><span class="token punctuation">(</span><span class="token string">&quot;fatal!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//在NT系统日志输出</span>
+        <span class="token class-name">Logger</span> logger2 <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">&quot;NTlog&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//NTEventLogAppender nla = new NTEventLogAppender();</span>
+        logger2<span class="token punctuation">.</span><span class="token function">debug</span><span class="token punctuation">(</span><span class="token string">&quot;debug!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger2<span class="token punctuation">.</span><span class="token function">info</span><span class="token punctuation">(</span><span class="token string">&quot;info!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger2<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">&quot;warn!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger2<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;error!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//只有这个错误才会写入2000日志</span>
+        logger2<span class="token punctuation">.</span><span class="token function">fatal</span><span class="token punctuation">(</span><span class="token string">&quot;fatal!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//把日志发送到mail</span>
+        <span class="token class-name">Logger</span> logger3 <span class="token operator">=</span> <span class="token class-name">Logger</span><span class="token punctuation">.</span><span class="token function">getLogger</span><span class="token punctuation">(</span><span class="token string">&quot;MailLog&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        <span class="token comment">//SMTPAppender sa = new SMTPAppender();</span>
+        logger3<span class="token punctuation">.</span><span class="token function">warn</span><span class="token punctuation">(</span><span class="token string">&quot;warn!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger3<span class="token punctuation">.</span><span class="token function">error</span><span class="token punctuation">(</span><span class="token string">&quot;error!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+        logger3<span class="token punctuation">.</span><span class="token function">fatal</span><span class="token punctuation">(</span><span class="token string">&quot;fatal!!!&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br></div></div><p>写在服务器路径的配置如下:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>log4j.logger.iplog= INFO, infoFile6
+log4j.appender.infoFile6=org.apache.log4j.FileAppender
+log4j.appender.infoFile6.File=${catalina.base}/logs/ipFilter.log
+log4j.appender.infoFile6.layout=org.apache.log4j.PatternLayout
+log4j.appender.infoFile6.layout.ConversionPattern=%m %d{yyyy-MM-dd HH:mm:ss} %n
+log4j.appender.infoFile6.encoding=UTF-8
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div></div> <!----> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/3/2019, 6:22:52 PM</span></div></footer> <!----> </main> <div class="valine-wrapper" data-v-0162251c><div id="valine" data-v-0162251c></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-d0bfeaa4 data-v-d0bfeaa4><i class="iconfont reco-up" data-v-d0bfeaa4></i></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.23d4d300.js" defer></script><script src="/assets/js/4.28fd9624.js" defer></script><script src="/assets/js/1.928d15b1.js" defer></script><script src="/assets/js/35.457382a4.js" defer></script>
+  </body>
+</html>

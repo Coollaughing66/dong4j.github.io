@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SSH Config 那些你所知道和不知道的事 | Black House</title>
+    <meta name="description" content="代码千万行, 注释第一行, 编码不规范, 同事两行泪.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.35477964.css" as="style"><link rel="preload" href="/assets/js/app.23d4d300.js" as="script"><link rel="preload" href="/assets/js/4.28fd9624.js" as="script"><link rel="preload" href="/assets/js/1.928d15b1.js" as="script"><link rel="preload" href="/assets/js/90.49e1e9ad.js" as="script"><link rel="prefetch" href="/assets/js/10.c2349238.js"><link rel="prefetch" href="/assets/js/100.031b764c.js"><link rel="prefetch" href="/assets/js/11.597103f4.js"><link rel="prefetch" href="/assets/js/12.01e326a5.js"><link rel="prefetch" href="/assets/js/13.6937eabc.js"><link rel="prefetch" href="/assets/js/14.0e95ab13.js"><link rel="prefetch" href="/assets/js/15.43c0e778.js"><link rel="prefetch" href="/assets/js/16.8c75ae64.js"><link rel="prefetch" href="/assets/js/17.02d12878.js"><link rel="prefetch" href="/assets/js/18.6b597676.js"><link rel="prefetch" href="/assets/js/19.524d893b.js"><link rel="prefetch" href="/assets/js/20.11686f52.js"><link rel="prefetch" href="/assets/js/21.ad025f0d.js"><link rel="prefetch" href="/assets/js/22.dca96777.js"><link rel="prefetch" href="/assets/js/23.121a28ab.js"><link rel="prefetch" href="/assets/js/24.99537c05.js"><link rel="prefetch" href="/assets/js/25.8f31fa14.js"><link rel="prefetch" href="/assets/js/26.a121c6cc.js"><link rel="prefetch" href="/assets/js/27.a57ec579.js"><link rel="prefetch" href="/assets/js/28.3f009b45.js"><link rel="prefetch" href="/assets/js/29.9c269e5b.js"><link rel="prefetch" href="/assets/js/30.168f09f3.js"><link rel="prefetch" href="/assets/js/31.ed454542.js"><link rel="prefetch" href="/assets/js/32.5f77ac76.js"><link rel="prefetch" href="/assets/js/33.3b921274.js"><link rel="prefetch" href="/assets/js/34.2e2dd8bc.js"><link rel="prefetch" href="/assets/js/35.457382a4.js"><link rel="prefetch" href="/assets/js/36.097474f8.js"><link rel="prefetch" href="/assets/js/37.2914dab3.js"><link rel="prefetch" href="/assets/js/38.bd900eff.js"><link rel="prefetch" href="/assets/js/39.00b0bb76.js"><link rel="prefetch" href="/assets/js/40.6d5aae82.js"><link rel="prefetch" href="/assets/js/41.e00929aa.js"><link rel="prefetch" href="/assets/js/42.b0c12805.js"><link rel="prefetch" href="/assets/js/43.7a60ce77.js"><link rel="prefetch" href="/assets/js/44.adf74ab9.js"><link rel="prefetch" href="/assets/js/45.36b6b8e2.js"><link rel="prefetch" href="/assets/js/46.a254f56a.js"><link rel="prefetch" href="/assets/js/47.aec9ad68.js"><link rel="prefetch" href="/assets/js/48.e3477ba7.js"><link rel="prefetch" href="/assets/js/49.5d974cde.js"><link rel="prefetch" href="/assets/js/5.c7e63593.js"><link rel="prefetch" href="/assets/js/50.c71471a2.js"><link rel="prefetch" href="/assets/js/51.de15920e.js"><link rel="prefetch" href="/assets/js/52.1eabf9c1.js"><link rel="prefetch" href="/assets/js/53.ada4082c.js"><link rel="prefetch" href="/assets/js/54.985c146e.js"><link rel="prefetch" href="/assets/js/55.33da5078.js"><link rel="prefetch" href="/assets/js/56.8b899006.js"><link rel="prefetch" href="/assets/js/57.f7ea6441.js"><link rel="prefetch" href="/assets/js/58.55ca22b7.js"><link rel="prefetch" href="/assets/js/59.3b16a882.js"><link rel="prefetch" href="/assets/js/6.8843ac12.js"><link rel="prefetch" href="/assets/js/60.7365ec6c.js"><link rel="prefetch" href="/assets/js/61.0508510a.js"><link rel="prefetch" href="/assets/js/62.8c3a0bf0.js"><link rel="prefetch" href="/assets/js/63.99503945.js"><link rel="prefetch" href="/assets/js/64.1193b17d.js"><link rel="prefetch" href="/assets/js/65.40a7b476.js"><link rel="prefetch" href="/assets/js/66.c95c74fb.js"><link rel="prefetch" href="/assets/js/67.dcc1ce00.js"><link rel="prefetch" href="/assets/js/68.e8aeba6d.js"><link rel="prefetch" href="/assets/js/69.13b69234.js"><link rel="prefetch" href="/assets/js/7.cda98f34.js"><link rel="prefetch" href="/assets/js/70.2308210c.js"><link rel="prefetch" href="/assets/js/71.bdac7c88.js"><link rel="prefetch" href="/assets/js/72.d5e7dabc.js"><link rel="prefetch" href="/assets/js/73.f1cec72d.js"><link rel="prefetch" href="/assets/js/74.13cbda62.js"><link rel="prefetch" href="/assets/js/75.5ec77696.js"><link rel="prefetch" href="/assets/js/76.e80c98fb.js"><link rel="prefetch" href="/assets/js/77.edf10bf3.js"><link rel="prefetch" href="/assets/js/78.9472aec2.js"><link rel="prefetch" href="/assets/js/79.2f59f6d2.js"><link rel="prefetch" href="/assets/js/8.64e66a3d.js"><link rel="prefetch" href="/assets/js/80.9d9b311d.js"><link rel="prefetch" href="/assets/js/81.112c831f.js"><link rel="prefetch" href="/assets/js/82.e98222ae.js"><link rel="prefetch" href="/assets/js/83.a7741563.js"><link rel="prefetch" href="/assets/js/84.47f9ec86.js"><link rel="prefetch" href="/assets/js/85.4b288089.js"><link rel="prefetch" href="/assets/js/86.d01d1b2a.js"><link rel="prefetch" href="/assets/js/87.26f71539.js"><link rel="prefetch" href="/assets/js/88.0cdca4ad.js"><link rel="prefetch" href="/assets/js/89.fca9f86b.js"><link rel="prefetch" href="/assets/js/9.8fcc4a9b.js"><link rel="prefetch" href="/assets/js/91.58ec2d07.js"><link rel="prefetch" href="/assets/js/92.0da2a72c.js"><link rel="prefetch" href="/assets/js/93.9d312aaf.js"><link rel="prefetch" href="/assets/js/94.e94db684.js"><link rel="prefetch" href="/assets/js/95.ed2aa34a.js"><link rel="prefetch" href="/assets/js/96.6a2e264d.js"><link rel="prefetch" href="/assets/js/97.8a055f18.js"><link rel="prefetch" href="/assets/js/98.1284385e.js"><link rel="prefetch" href="/assets/js/99.830ddc7a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3ceaf8af.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35477964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="Black House" class="logo"> <span class="site-name">Black House</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>SSH Config 那些你所知道和不知道的事</span> <!----></p> <!----></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>SSH Config 那些你所知道和不知道的事</h1> <hr> <div data-v-0b496ca7><i class="iconfont reco-account" data-v-0b496ca7><span data-v-0b496ca7>dong4j</span></i> <i class="iconfont reco-date" data-v-0b496ca7><span data-v-0b496ca7>6/5/2018</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0b496ca7><span class="tag-item" data-v-0b496ca7>
+      Tools
+    </span></i></div></div> <div class="content__default"><div class="tip custom-block"><p>SSH（Secure Shell）是什么？是一项创建在应用层和传输层基础上的安全协议, 为计算机上的 Shell（壳层）提供安全的传输和使用环境.
+也是专为远程登录会话和其他网络服务提供安全性的协议.
+它能够有效防止远程管理过程中的信息泄露问题.
+通过 SSH 可以对所有传输的数据进行加密, 也能够防止 DNS 欺骗和 IP 欺骗.</p></div> <p>具体生成 SSH Key 方式请参考: <a href="https://deepzz.com/post/github-generate-ssh-key.html" target="_blank" rel="noopener noreferrer">Github ssh key 生成, 免密登录服务器方法<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>. 这里以 <code>id_ecdsa</code>（私钥） 和 <code>id_ecdsa.pub</code>（公钥） 为例.</p> <p>本篇文章主要介绍 SSH 相关的使用技巧. 通过对 <code>~/.ssh/config</code> 文件的配置你可以大大简化 SSH 相关的操作, 如:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Host example                       <span class="token comment"># 关键词</span>
+    HostName example.com           <span class="token comment"># 主机地址</span>
+    User root                      <span class="token comment"># 用户名</span>
+    <span class="token comment"># IdentityFile ~/.ssh/id_ecdsa # 认证文件</span>
+    <span class="token comment"># Port 22                      # 指定端口</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>通过执行 <code>$ ssh example</code> 我就可以登录我的服务器. 而不需要敲更多的命令 <code>$ ssh root@example.com</code>. 又如我们想要向服务器传文件 <code>$ scp a.txt example:/home/user_name</code>. 比以前方便多了.</p> <p>更过相关帮助文档请参考 <code>$ man ssh_config 5</code>.</p> <h3 id="配置项说明"><a href="#配置项说明" aria-hidden="true" class="header-anchor">#</a> 配置项说明</h3> <p>SSH 的配置文件有两个:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>$ ~/.ssh/config            <span class="token comment"># 用户配置文件</span>
+$ /etc/ssh/ssh_config      <span class="token comment"># 系统配置文件</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>下面来看看常用的配置参数.</p> <p><strong>Host</strong>
+用于我们执行 SSH 命令的时候如何匹配到该配置.</p> <ul><li><code>*</code>, 匹配所有主机名.</li> <li><code>*.example.com</code>, 匹配以 .example.com 结尾.</li> <li><code>!*.dialup.example.com,*.example.com</code>, 以 ! 开头是排除的意思.</li> <li><code>192.168.0.?</code>, 匹配 192.168.0.[0-9] 的 IP.</li></ul> <p><strong>AddKeysToAgent</strong></p> <p>是否自动将 key 加入到 <code>ssh-agent</code>, 值可以为 no(default)/confirm/ask/yes.</p> <p>如果是 yes, key 和密码都将读取文件并以加入到 agent , 就像 <code>ssh-add</code>. 其他分别是询问、确认、不加入的意思. 添加到 ssh-agent 意味着将私钥和密码交给它管理, 让它来进行身份认证.</p> <p><strong>AddressFamily</strong></p> <p>指定连接的时候使用的地址族, 值可以为 any(default)/inet(IPv4)/inet6(IPv6).</p> <p><strong>BindAddress</strong></p> <p>指定连接的时候使用的本地主机地址, 只在系统有多个地址的时候有用. 在 UsePrivilegedPort 值为 yes 的时候无效.</p> <p><strong>ChallengeResponseAuthentication</strong></p> <p>是否响应支持的身份验证 chanllenge, yes(default)/no.</p> <p><strong>Compression</strong></p> <p>是否压缩, 值可以为 no(default)/yes.</p> <p><strong>CompressionLevel</strong></p> <p>压缩等级, 值可以为 1(fast)-9(slow). 6(default), 相当于 gzip.</p> <p><strong>ConnectionAttempts</strong></p> <p>退出前尝试连接的次数, 值必须为整数, 1(default).</p> <p><strong>ConnectTimeout</strong></p> <p>连接 SSH 服务器超时时间, 单位 s, 默认系统 TCP 超时时间.</p> <p><strong>ControlMaster</strong></p> <p>是否开启单一网络共享多个 session, 值可以为 no(default)/yes/ask/auto. 需要和 ControlPath 配合使用, 当值为 yes 时, ssh 会监听该路径下的 control socket, 多个 session 会去连接该 socket, 它们会尽可能的复用该网络连接而不是重新建立新的.</p> <p><strong>ControlPath</strong></p> <p>指定 control socket 的路径, 值可以直接指定也可以用一下参数代替:</p> <ul><li>%L 本地主机名的第一个组件</li> <li>%l 本地主机名（包括域名）</li> <li>%h 远程主机名（命令行输入）</li> <li>%n 远程原始主机名</li> <li>%p 远程主机端口</li> <li>%r 远程登录用户名</li> <li>%u 本地 ssh 正在使用的用户名</li> <li>%i 本地 ssh 正在使用 uid</li> <li>%C 值为 %l%h%p%r 的 hash</li></ul> <p>请最大限度的保持 ControlPath 的唯一. 至少包含 %h, %p, %r（或者 %C）.</p> <p><strong>ControlPersist</strong></p> <p>结合 ControlMaster 使用, 指定连接打开后后台保持的时间. 值可以为 no/yes / 整数, 单位 s. 如果为 no, 最初的客户端关闭就关闭. 如果 yes/0, 无限期的, 直到杀死或通过其它机制, 如: ssh -O exit.</p> <p><strong>GatewayPorts</strong></p> <p>指定是否允许远程主机连接到本地转发端口, 值可以为 no(default)/yes. 默认情况, ssh 为本地回环地址绑定了端口转发器.</p> <p><strong>HostName</strong></p> <p>真实的主机名, 默认值为命令行输入的值（允许 IP）. 你也可以使用 %h, 它将自动替换, 只要替换后的地址是完整的就 ok.</p> <p><strong>IdentitiesOnly</strong></p> <p>指定 ssh 只能使用配置文件指定的 identity 和 certificate 文件或通过 ssh 命令行通过身份验证, 即使 ssh-agent 或 PKCS11Provider 提供了多个 identities. 值可以为 no(default)/yes.</p> <p><strong>IdentityFile</strong></p> <p>指定读取的认证文件路径, 允许 DSA, ECDSA, Ed25519 或 RSA. 值可以直接指定也可以用一下参数代替:</p> <ul><li>%d, 本地用户目录 ~</li> <li>%u, 本地用户</li> <li>%l, 本地主机名</li> <li>%h, 远程主机名</li> <li>%r, 远程用户名</li></ul> <p><strong>LocalCommand</strong></p> <p>指定在连接成功后, 本地主机执行的命令（单纯的本地命令）. 可使用 %d, %h, %l, %n, %p, %r, %u, %C 替换部分参数. 只在 PermitLocalCommand 开启的情况下有效.</p> <p><strong>LocalForward</strong></p> <p>指定本地主机的端口通过 ssh 转发到指定远程主机. 格式: LocalForward [bind_address:]post host:hostport, 支持 IPv6.</p> <p><strong>PasswordAuthentication</strong></p> <p>是否使用密码进行身份验证, yes(default)/no.</p> <p><strong>PermitLocalCommand</strong></p> <p>是否允许指定 LocalCommand, 值可以为 no(default)/yes.</p> <p><strong>Port</strong></p> <p>指定连接远程主机的哪个端口, 22(default).</p> <p><strong>ProxyCommand</strong></p> <p>指定连接的服务器需要执行的命令. %h, %p, %r</p> <p>如: ProxyCommand /usr/bin/nc -X connect -x 192.0.2.0:8080 %h %p</p> <p><strong>User</strong></p> <p>登录用户名</p> <h3 id="相关技巧"><a href="#相关技巧" aria-hidden="true" class="header-anchor">#</a> 相关技巧</h3> <h4 id="管理多组密钥对"><a href="#管理多组密钥对" aria-hidden="true" class="header-anchor">#</a> 管理多组密钥对</h4> <p>有时候你会针对多个服务器有不同的密钥对, 每次通过指定 <code>-i</code> 参数也是非常的不方便. 比如你使用 github 和 coding. 那么你需要添加如下配置到 <code>~/.ssh/config</code>:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Host github
+    HostName %h.com
+    IdentityFile ~/.ssh/id_ecdsa_github
+    User <span class="token function">git</span>
+Host coding
+    HostName git.coding.net
+    IdentityFile ~/.ssh/id_rsa_coding
+    User <span class="token function">git</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>当你克隆 coding 上的某个仓库时:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code><span class="token comment"># 原来</span>
+$ <span class="token function">git</span> clone git@git.coding.net:deepzz/test.git
+
+<span class="token comment"># 现在</span>
+$ <span class="token function">git</span> clone coding:deepzz/test.git
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h4 id="vim-访问远程文件"><a href="#vim-访问远程文件" aria-hidden="true" class="header-anchor">#</a> vim 访问远程文件</h4> <p>vim 可以直接编辑远程服务器上的文件:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>$ <span class="token function">vim</span> scp://root@example.com//home/centos/docker-compose.yml
+$ <span class="token function">vim</span> scp://example//home/centos/docker-compose.yml
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h4 id="远程服务当本地用"><a href="#远程服务当本地用" aria-hidden="true" class="header-anchor">#</a> 远程服务当本地用</h4> <p>通过 LocalForward 将本地端口上的数据流量通过 ssh 转发到远程主机的指定端口. 感觉你是使用的本地服务, 其实你使用的远程服务. 如远程服务器上运行着 Postgres, 端口 5432（未暴露端口给外部）. 那么, 你可以:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Host db
+    HostName db.example.com
+    LocalForward 5433 localhost:5432
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>当你连接远程主机时, 它会在本地打开一个 5433 端口, 并将该端口的流量通过 ssh 转发到远程服务器上的 5432 端口.</p> <p>首先, 建立连接:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>$ <span class="token function">ssh</span> db
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>之后, 就可以通过 Postgres 客户端连接本地 5433 端口:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>$ psql -h localhost -p 5433 orders
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h4 id="多连接共享"><a href="#多连接共享" aria-hidden="true" class="header-anchor">#</a> 多连接共享</h4> <p>什么是多连接共享？在你打开多个 shell 窗口时需要连接同一台服务器, 如果你不想每次都输入用户名, 密码, 或是等待连接建立, 那么你需要添加如下配置到 <code>~/.ssh/config</code>:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>ControlMaster auto
+ControlPath /tmp/%r@%h:%p
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="禁用密码登录"><a href="#禁用密码登录" aria-hidden="true" class="header-anchor">#</a> 禁用密码登录</h4> <p>如果你对服务器安全要求很高, 那么禁用密码登录是必须的. 因为使用密码登录服务器容易受到暴力破解的攻击, 有一定的安全隐患. 那么你需要编辑服务器的系统配置文件 <code>/etc/ssh/sshd_config</code>:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>PasswordAuthentication no
+ChallengeResponseAuthentication no
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><h4 id="关键词登录"><a href="#关键词登录" aria-hidden="true" class="header-anchor">#</a> 关键词登录</h4> <p>为了更方便的登录服务器, 我们也可以省略用户名和主机名, 采用关键词登录. 那么你需要添加如下配置到 <code>~/.ssh/config</code>:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Host deepzz                        <span class="token comment"># 别名</span>
+    HostName deepzz.com            <span class="token comment"># 主机地址</span>
+    User root                      <span class="token comment"># 用户名</span>
+    <span class="token comment"># IdentityFile ~/.ssh/id_ecdsa # 认证文件</span>
+    <span class="token comment"># Port 22                      # 指定端口</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>那么使用 <code>$ ssh deepzz</code> 就可以直接登录服务器了.</p> <h4 id="代理登录"><a href="#代理登录" aria-hidden="true" class="header-anchor">#</a> 代理登录</h4> <p>有的时候你可能没法直接登录到某台服务器, 而需要使用一台中间服务器进行中转, 如公司内网服务器. 首先确保你已经为服务器配置了公钥访问, 并开启了 agent forwarding, 那么你需要添加如下配置到 <code>~/.ssh/config</code>:</p> <div class="language-bash line-numbers-mode"><pre class="language-bash"><code>Host gateway
+    HostName proxy.example.com
+    User root
+Host db
+    HostName db.internal.example.com                  <span class="token comment"># 目标服务器地址</span>
+    User root                                         <span class="token comment"># 用户名</span>
+    <span class="token comment"># IdentityFile ~/.ssh/id_ecdsa                    # 认证文件</span>
+    ProxyCommand <span class="token function">ssh</span> gateway netcat -q 600 %h %p      <span class="token comment"># 代理命令</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><p>那么你现在可以使用 <code>$ ssh db</code> 连接了.</p></div> <!----> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/3/2019, 6:22:52 PM</span></div></footer> <!----> </main> <div class="valine-wrapper" data-v-0162251c><div id="valine" data-v-0162251c></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-d0bfeaa4 data-v-d0bfeaa4><i class="iconfont reco-up" data-v-d0bfeaa4></i></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.23d4d300.js" defer></script><script src="/assets/js/4.28fd9624.js" defer></script><script src="/assets/js/1.928d15b1.js" defer></script><script src="/assets/js/90.49e1e9ad.js" defer></script>
+  </body>
+</html>

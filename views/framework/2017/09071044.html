@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>zheng 框架解析 (二) | Black House</title>
+    <meta name="description" content="代码千万行, 注释第一行, 编码不规范, 同事两行泪.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.35477964.css" as="style"><link rel="preload" href="/assets/js/app.23d4d300.js" as="script"><link rel="preload" href="/assets/js/4.28fd9624.js" as="script"><link rel="preload" href="/assets/js/1.928d15b1.js" as="script"><link rel="preload" href="/assets/js/18.6b597676.js" as="script"><link rel="prefetch" href="/assets/js/10.c2349238.js"><link rel="prefetch" href="/assets/js/100.031b764c.js"><link rel="prefetch" href="/assets/js/11.597103f4.js"><link rel="prefetch" href="/assets/js/12.01e326a5.js"><link rel="prefetch" href="/assets/js/13.6937eabc.js"><link rel="prefetch" href="/assets/js/14.0e95ab13.js"><link rel="prefetch" href="/assets/js/15.43c0e778.js"><link rel="prefetch" href="/assets/js/16.8c75ae64.js"><link rel="prefetch" href="/assets/js/17.02d12878.js"><link rel="prefetch" href="/assets/js/19.524d893b.js"><link rel="prefetch" href="/assets/js/20.11686f52.js"><link rel="prefetch" href="/assets/js/21.ad025f0d.js"><link rel="prefetch" href="/assets/js/22.dca96777.js"><link rel="prefetch" href="/assets/js/23.121a28ab.js"><link rel="prefetch" href="/assets/js/24.99537c05.js"><link rel="prefetch" href="/assets/js/25.8f31fa14.js"><link rel="prefetch" href="/assets/js/26.a121c6cc.js"><link rel="prefetch" href="/assets/js/27.a57ec579.js"><link rel="prefetch" href="/assets/js/28.3f009b45.js"><link rel="prefetch" href="/assets/js/29.9c269e5b.js"><link rel="prefetch" href="/assets/js/30.168f09f3.js"><link rel="prefetch" href="/assets/js/31.ed454542.js"><link rel="prefetch" href="/assets/js/32.5f77ac76.js"><link rel="prefetch" href="/assets/js/33.3b921274.js"><link rel="prefetch" href="/assets/js/34.2e2dd8bc.js"><link rel="prefetch" href="/assets/js/35.457382a4.js"><link rel="prefetch" href="/assets/js/36.097474f8.js"><link rel="prefetch" href="/assets/js/37.2914dab3.js"><link rel="prefetch" href="/assets/js/38.bd900eff.js"><link rel="prefetch" href="/assets/js/39.00b0bb76.js"><link rel="prefetch" href="/assets/js/40.6d5aae82.js"><link rel="prefetch" href="/assets/js/41.e00929aa.js"><link rel="prefetch" href="/assets/js/42.b0c12805.js"><link rel="prefetch" href="/assets/js/43.7a60ce77.js"><link rel="prefetch" href="/assets/js/44.adf74ab9.js"><link rel="prefetch" href="/assets/js/45.36b6b8e2.js"><link rel="prefetch" href="/assets/js/46.a254f56a.js"><link rel="prefetch" href="/assets/js/47.aec9ad68.js"><link rel="prefetch" href="/assets/js/48.e3477ba7.js"><link rel="prefetch" href="/assets/js/49.5d974cde.js"><link rel="prefetch" href="/assets/js/5.c7e63593.js"><link rel="prefetch" href="/assets/js/50.c71471a2.js"><link rel="prefetch" href="/assets/js/51.de15920e.js"><link rel="prefetch" href="/assets/js/52.1eabf9c1.js"><link rel="prefetch" href="/assets/js/53.ada4082c.js"><link rel="prefetch" href="/assets/js/54.985c146e.js"><link rel="prefetch" href="/assets/js/55.33da5078.js"><link rel="prefetch" href="/assets/js/56.8b899006.js"><link rel="prefetch" href="/assets/js/57.f7ea6441.js"><link rel="prefetch" href="/assets/js/58.55ca22b7.js"><link rel="prefetch" href="/assets/js/59.3b16a882.js"><link rel="prefetch" href="/assets/js/6.8843ac12.js"><link rel="prefetch" href="/assets/js/60.7365ec6c.js"><link rel="prefetch" href="/assets/js/61.0508510a.js"><link rel="prefetch" href="/assets/js/62.8c3a0bf0.js"><link rel="prefetch" href="/assets/js/63.99503945.js"><link rel="prefetch" href="/assets/js/64.1193b17d.js"><link rel="prefetch" href="/assets/js/65.40a7b476.js"><link rel="prefetch" href="/assets/js/66.c95c74fb.js"><link rel="prefetch" href="/assets/js/67.dcc1ce00.js"><link rel="prefetch" href="/assets/js/68.e8aeba6d.js"><link rel="prefetch" href="/assets/js/69.13b69234.js"><link rel="prefetch" href="/assets/js/7.cda98f34.js"><link rel="prefetch" href="/assets/js/70.2308210c.js"><link rel="prefetch" href="/assets/js/71.bdac7c88.js"><link rel="prefetch" href="/assets/js/72.d5e7dabc.js"><link rel="prefetch" href="/assets/js/73.f1cec72d.js"><link rel="prefetch" href="/assets/js/74.13cbda62.js"><link rel="prefetch" href="/assets/js/75.5ec77696.js"><link rel="prefetch" href="/assets/js/76.e80c98fb.js"><link rel="prefetch" href="/assets/js/77.edf10bf3.js"><link rel="prefetch" href="/assets/js/78.9472aec2.js"><link rel="prefetch" href="/assets/js/79.2f59f6d2.js"><link rel="prefetch" href="/assets/js/8.64e66a3d.js"><link rel="prefetch" href="/assets/js/80.9d9b311d.js"><link rel="prefetch" href="/assets/js/81.112c831f.js"><link rel="prefetch" href="/assets/js/82.e98222ae.js"><link rel="prefetch" href="/assets/js/83.a7741563.js"><link rel="prefetch" href="/assets/js/84.47f9ec86.js"><link rel="prefetch" href="/assets/js/85.4b288089.js"><link rel="prefetch" href="/assets/js/86.d01d1b2a.js"><link rel="prefetch" href="/assets/js/87.26f71539.js"><link rel="prefetch" href="/assets/js/88.0cdca4ad.js"><link rel="prefetch" href="/assets/js/89.fca9f86b.js"><link rel="prefetch" href="/assets/js/9.8fcc4a9b.js"><link rel="prefetch" href="/assets/js/90.49e1e9ad.js"><link rel="prefetch" href="/assets/js/91.58ec2d07.js"><link rel="prefetch" href="/assets/js/92.0da2a72c.js"><link rel="prefetch" href="/assets/js/93.9d312aaf.js"><link rel="prefetch" href="/assets/js/94.e94db684.js"><link rel="prefetch" href="/assets/js/95.ed2aa34a.js"><link rel="prefetch" href="/assets/js/96.6a2e264d.js"><link rel="prefetch" href="/assets/js/97.8a055f18.js"><link rel="prefetch" href="/assets/js/98.1284385e.js"><link rel="prefetch" href="/assets/js/99.830ddc7a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3ceaf8af.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35477964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="Black House" class="logo"> <span class="site-name">Black House</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>zheng 框架解析 (二)</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/framework/2017/09071044.html#dubbo-monitor-部属" class="sidebar-link">dubbo-monitor 部属</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/framework/2017/09071044.html#dubbo-admin-部署" class="sidebar-link">dubbo-admin 部署</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/framework/2017/09071044.html#项目部署" class="sidebar-link">项目部署</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/framework/2017/09071044.html#环境搭建" class="sidebar-link">环境搭建</a></li><li class="sidebar-sub-header"><a href="/views/framework/2017/09071044.html#打包" class="sidebar-link">打包</a></li><li class="sidebar-sub-header"><a href="/views/framework/2017/09071044.html#上传" class="sidebar-link">上传</a></li><li class="sidebar-sub-header"><a href="/views/framework/2017/09071044.html#启动" class="sidebar-link">启动</a></li><li class="sidebar-sub-header"><a href="/views/framework/2017/09071044.html#完成" class="sidebar-link">完成</a></li></ul></li><li><a href="/views/framework/2017/09071044.html#遇到的问题" class="sidebar-link">遇到的问题</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/framework/2017/09071044.html#hosts" class="sidebar-link">hosts</a></li><li class="sidebar-sub-header"><a href="/views/framework/2017/09071044.html#dubbo-monitor" class="sidebar-link">dubbo-monitor</a></li></ul></li></ul></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>zheng 框架解析 (二)</h1> <hr> <div data-v-0b496ca7><i class="iconfont reco-account" data-v-0b496ca7><span data-v-0b496ca7>dong4j</span></i> <i class="iconfont reco-date" data-v-0b496ca7><span data-v-0b496ca7>7/7/2017</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0b496ca7><span class="tag-item" data-v-0b496ca7>
+      Zheng
+    </span></i></div></div> <div class="content__default"><div class="tip custom-block"><p>这篇是从 git clone 项目开始, 从搭建环境到部属的过程, 希望对想学习的朋友有帮助.</p></div> <p>看到群里有朋友出现了下面的错误, 我也出现了</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>com.alibaba.dubbo.rpc.RpcException: Forbid consumer 192.168.1.89 access service com.alibaba.dubbo.monitor.MonitorService from registry zkserver:2181 use dubbo version 2.5.3, Please check registry access list (whitelist/blacklist).
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>在出现上面的错误时, 都会打印下面一段信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>INFO  [com.alibaba.dubbo.monitor.dubbo.DubboMonitor] -  [DUBBO] Send statistics to monitor zookeeper://zkserver:2181/com.alibaba.dubbo.monitor.MonitorService?dubbo=2.5.3&amp;interface=com.alibaba.dubbo.monitor.MonitorService&amp;pid=43821&amp;timestamp=1504769453531, dubbo version: 2.5.3, current host: 192.168.1.89
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>消费者向提供者发送统计数据时, 由于注册中心里面找不到那个提供者的信息, 抛出了最上面的错误.</p> <p><code>MonitorService</code>, 一看就知道是跟 dubbo monitor 有关.</p> <p>查看 <code>dubb-admin</code>, 也可以看到, <code>MonitorService</code> 没有提供者</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15047714889823.png" alt=""></p> <p>最后查看 readme.md, 看见 zheng 使用了 <code>Dubbo-monitor</code> <code>dubbo-monitor</code> 跟 <code>dubbo-admin</code> 一样, 需要我们自己部属</p> <h2 id="dubbo-monitor-部属"><a href="#dubbo-monitor-部属" aria-hidden="true" class="header-anchor">#</a> dubbo-monitor 部属</h2> <p>这里使用 <a href="http://git.oschina.net/handu/dubbo-monitor" target="_blank" rel="noopener noreferrer">韩都衣舍<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 的 <code>Dubbo Monitor for Relational Database</code></p> <p>不为别的, 就因为 <code>dubbo-monitor-simple</code> 太丑了 😂</p> <p>官方的 readme.md 说得已经很清楚了, 照着来就是了</p> <p>部属成功后 访问 <code>http://127.0.0.1:9527/dubbo-monitor/</code></p> <p>最后的效果如下:</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-07%205.12.12.png" alt="屏幕快照 2017-09-07 5.12.12"> <img src="http://qiniu.dong4j.info/2019-07-03-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-07%205.12.45.png" alt="屏幕快照 2017-09-07 5.12.45">
+然后就不会报错了</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202017-09-07%205.13.45.png" alt="屏幕快照 2017-09-07 5.13.45">
+红色部分不未部署之前, 后面可以看到, 发送统计数据后没有报错了</p> <p><strong>另一种解决方案</strong></p> <p>在 dubbo.xml 中配置了 monitor 才会发送统计数据</p> <p>所以删除所有 <code>&lt;dubbo:monitor protocol=&quot;registry&quot;/&gt;</code> 不使用 monitor 即可</p> <h2 id="dubbo-admin-部署"><a href="#dubbo-admin-部署" aria-hidden="true" class="header-anchor">#</a> dubbo-admin 部署</h2> <p>和 dubbo-monitor 一样  😄</p> <h2 id="项目部署"><a href="#项目部署" aria-hidden="true" class="header-anchor">#</a> 项目部署</h2> <p>本人工作中使用的 Maven 环境跟 zheng 不一样, 为了方便, 这里写了个脚本, 可以切换不同的 Maven 配置</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code>change<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+  file_name<span class="token operator">=</span><span class="token string">'settings.xml.'</span><span class="token variable">$1</span>
+  is_exist<span class="token operator">=</span><span class="token string">&quot;<span class="token variable"><span class="token variable">$(</span><span class="token function">find</span> ~/.m2 -name $file_name<span class="token variable">)</span></span>&quot;</span>
+  <span class="token keyword">if</span> <span class="token punctuation">[</span> <span class="token variable">$is_exist</span> <span class="token punctuation">]</span>
+  <span class="token keyword">then</span> 
+    <span class="token function">mv</span> ~/.m2/settings.xml ~/.m2/settings.xml.<span class="token variable">$2</span><span class="token punctuation">;</span>
+    <span class="token function">mv</span> ~/.m2/<span class="token variable">$file_name</span> ~/.m2/settings.xml
+  <span class="token keyword">fi</span>
+  <span class="token keyword">echo</span> <span class="token string">&quot;change &quot;</span> <span class="token variable">$1</span> <span class="token string">'to '</span> <span class="token variable">$2</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="环境搭建"><a href="#环境搭建" aria-hidden="true" class="header-anchor">#</a> 环境搭建</h3> <p>这里使用 Vagrant 来搭建环境, 一是不想把自己本地的环境搞乱, 二是方便, 环境搭建好之后, 打包一个 package, 到哪儿都能用.</p> <p>Vagrant 里面的依赖都已经安装好了, 配置一下就 ok 了.</p> <p>Vagrant 的 ip 地址为 <code>2.2.2.2</code></p> <p><strong>zheng 是需要修改 hosts 的, 很多朋友没有看完文档就开始搞, 导致项目运行不起来.</strong></p> <h4 id="redis"><a href="#redis" aria-hidden="true" class="header-anchor">#</a> Redis</h4> <ol><li><p>允许远程访问
+这里为了方便查看 redis , 这里设置为允许远程访问</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 修改以下配置:
+# 1. 注释 bind 127.0.0.1
+# 2. protected-mode 由 yes --&gt; no
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></li> <li><p>修改密码
+我这里修改了 Redis 的密码, 默认是为空的</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>requirepass 123456
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div></li></ol> <p>Redis 远程连接成功</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053088497988.jpg" alt=""></p> <h4 id="nginx"><a href="#nginx" aria-hidden="true" class="header-anchor">#</a> Nginx</h4> <p>来一份简单实用的 nginx.conf 配置</p> <div class="language-nginx line-numbers-mode"><pre class="language-nginx"><code><span class="token keyword">worker_processes</span>  <span class="token number">1</span><span class="token punctuation">;</span>
+<span class="token keyword">events</span> <span class="token punctuation">{</span>
+    <span class="token keyword">worker_connections</span>  <span class="token number">1024</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">http</span> <span class="token punctuation">{</span>
+    <span class="token keyword">include</span>       mime<span class="token punctuation">.</span><span class="token keyword">types</span><span class="token punctuation">;</span>
+    <span class="token keyword">default_type</span>  application<span class="token operator">/</span>octet<span class="token operator">-</span>stream<span class="token punctuation">;</span>
+    <span class="token keyword">sendfile</span>        on<span class="token punctuation">;</span>
+    <span class="token keyword">keepalive_timeout</span>  <span class="token number">65</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">server</span> <span class="token punctuation">{</span>
+        <span class="token keyword">listen</span>  <span class="token number">80</span><span class="token punctuation">;</span>
+        <span class="token keyword">server_name</span>  localhost<span class="token punctuation">;</span>
+        <span class="token keyword">location</span> <span class="token operator">/</span> <span class="token punctuation">{</span>
+            <span class="token keyword">root</span>   <span class="token operator">/</span>zheng<span class="token operator">/</span>zheng<span class="token operator">-</span>cms<span class="token operator">-</span>web<span class="token operator">/</span><span class="token punctuation">;</span>
+            <span class="token keyword">index</span>  <span class="token keyword">index</span><span class="token punctuation">.</span>html <span class="token keyword">index</span><span class="token punctuation">.</span>htm<span class="token punctuation">;</span>
+            <span class="token keyword">add_header</span> Access<span class="token operator">-</span>Control<span class="token operator">-</span><span class="token keyword">Allow</span><span class="token operator">-</span>Origin <span class="token operator">*</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-03-15053109477372.jpg" alt=""></p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 修改了 nginx.conf 后, 重新加载配置文件
+nginx -s reload
+# 停止 nginx
+nginx -s stop
+# 检查配置文件
+nginx -t
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h5 id="idea-配置服务器-直接上传文件"><a href="#idea-配置服务器-直接上传文件" aria-hidden="true" class="header-anchor">#</a> IDEA 配置服务器, 直接上传文件</h5> <p>让你体会一下什么是 <strong>沉浸式 IDE</strong></p> <p>配置 Deployment</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053099932238.png" alt=""></p> <ol><li><p>配置服务器
+<img src="http://qiniu.dong4j.info/2019-07-03-15053099379734.jpg" alt=""></p></li> <li><p>配置本地目录与服务器目录映射关系
+<img src="http://qiniu.dong4j.info/2019-07-03-15053101053087.jpg" alt=""></p></li> <li><p>完成配置
+<img src="http://qiniu.dong4j.info/2019-07-03-15053102942439.jpg" alt=""></p></li> <li><p>上传本地文件到服务器</p></li></ol> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053125430349.jpg" alt=""></p> <ol start="5"><li>哦了
+<img src="http://qiniu.dong4j.info/2019-07-03-15053108091012.jpg" alt=""></li></ol> <p>修改了 html, upload, 刷新, so easy
+<img src="http://qiniu.dong4j.info/2019-07-03-2017-09-13%2022.05.50.gif" alt="2017-09-13 22.05.50"></p> <h4 id="zookeeper"><a href="#zookeeper" aria-hidden="true" class="header-anchor">#</a> Zookeeper</h4> <p>Zookeeper 使用默认配置就可以了, 三种配置方式</p> <ol><li>单机</li> <li>伪集群</li> <li>真集群</li></ol> <p>这里就不说了, 我使用单机配置, 简单</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 心跳检测毫秒数
+tickTime=2000
+# follower 初始化连接最长忍受的心跳数时间间隔 2000*10=20秒
+initLimit=10
+# leader 和 follower 之间发送消息请求和应答时间长度 5*2000=10秒
+syncLimit=5
+# 数据持久化的目录
+dataDir=~/Develop/logs/zookeeper/data
+# 日志
+dataLogDir=~/Develop/logs/zookeeper/log
+# 向 client 暴露的端口
+clientPort=2181
+
+# 最大客户端连接数
+# maxClientCnxns=60
+# 快照个数
+# autopurge.snapRetainCount=3
+# 快照保存时间间隔小时
+#autopurge.purgeInterval=1
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br></div></div><p>下个插件 zookeeper, 能看到 zookeeper 的节点信息</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053734558945.png" alt=""></p> <h4 id="activemq"><a href="#activemq" aria-hidden="true" class="header-anchor">#</a> ActiveMQ</h4> <p>默认配置</p> <p>略... 😂😂</p> <h4 id="tomcat"><a href="#tomcat" aria-hidden="true" class="header-anchor">#</a> Tomcat</h4> <p>这里只要一台服务器, 所有就搞个单机多实例的配置, 这里要修改 Tomcat 配置,
+让一台服务器上跑 2个 Tomcat, 不为别的, 以为我就一台虚拟机, 意思一下就可以了 😂😂</p> <p>将解压后的 Tomcat 复制一份
+修改 <strong>每个 tomcat 实例中 server.xml 中的端口</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;Server port=&quot;9005&quot; shutdown=&quot;SHUTDOWN&quot;&gt;
+  ....
+  &lt;Service name=&quot;Catalina&quot;&gt;
+    &lt;Connector port=&quot;1111&quot; protocol=&quot;HTTP/1.1&quot;
+               connectionTimeout=&quot;20000&quot;
+               redirectPort=&quot;9443&quot; /&gt;
+    &lt;Connector port=&quot;9009&quot; protocol=&quot;AJP/1.3&quot; redirectPort=&quot;9443&quot; /&gt;
+    ...
+  &lt;/Service&gt;
+&lt;/Server&gt;
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>2个 server.xml 只要不一样就行了, 只要确保修改的端口没有被其他程序占用就可以了.</p> <p>然后一个一个启动吧,如果嫌麻烦, 也可以写脚本一键启动</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053146148783.jpg" alt=""></p> <p>一个 1111, 另一个 2222</p> <p>一般都是先把 war 上传到临时目录下, 然后再移动到 webapp 下, 不要在 tomcat 正在运行的时候把 war 直接上传到 webapp 下, 因为一旦上传开始, webapp 下就会有出现 war, 然后 tomcat 就开始解压了,但是这个 war 并不完整, 会出错的</p> <p>也可以使用上面的方式, 同步本地文件到服务器, 只限于开发, 生产环境你不一定有账号, 二是谁让你没事一直连着生产服务器的?</p> <h4 id="启动依赖软件"><a href="#启动依赖软件" aria-hidden="true" class="header-anchor">#</a> 启动依赖软件</h4> <p>写一个简单的脚本, 一键启动所有依赖</p> <div class="language-shell line-numbers-mode"><pre class="language-shell"><code><span class="token shebang important">#!/bin/bash</span>
+<span class="token function">export</span> JAVA_HOME<span class="token operator">=</span>/usr/local/java
+<span class="token function">export</span> PATH<span class="token operator">=</span><span class="token variable">$JAVA_HOME</span>/bin:<span class="token variable">$PATH</span>
+<span class="token comment"># zookeeper</span>
+<span class="token function">nohup</span> /usr/local/kafka/bin/zookeeper-server-start.sh /usr/local/kafka/config/zookeeper.properties <span class="token operator">&amp;</span>
+<span class="token keyword">echo</span> <span class="token string">&quot;zookeeper 启动完成&quot;</span>
+<span class="token comment"># redis</span>
+<span class="token function">nohup</span> /usr/local/redis/src/redis-server /usr/local/redis/redis.conf <span class="token operator">&amp;</span>
+<span class="token keyword">echo</span> <span class="token string">&quot;redis 启动完成&quot;</span>
+<span class="token comment"># nginx</span>
+/usr/local/nginx/sbin/nginx
+<span class="token keyword">echo</span> <span class="token string">&quot;nginx 启动完成&quot;</span>
+<span class="token comment"># ActiveMQ</span>
+/usr/local/activemq/bin/activemq start
+<span class="token keyword">echo</span> <span class="token string">&quot;activemq 启动完成&quot;</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p>tomcat 就手动启动吧, 敲敲命名也是好的</p> <p>😂😂</p> <h3 id="打包"><a href="#打包" aria-hidden="true" class="header-anchor">#</a> 打包</h3> <p>先修改配置文件</p> <p>由于 Vagrant 里面没有安装 MySQL, 我就连接本地的了, 一般数据库都是单独的服务器, 正好模拟一下</p> <p><strong>2017-09-14 11:59 dong4j 更新</strong></p> <p>这里吐槽一下, 很多配置是写死的, 比如说 dubbo 里面的 zookeeper 注册地址, 没有写到配置文件中去,
+所以这里还是改回使用 hosts 的方式.</p> <p>只修改了 mysql 的地址, 其他的按照原文档修改 hosts</p> <p>使用 Maven 打包</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mvn clean package -Pprod
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="上传"><a href="#上传" aria-hidden="true" class="header-anchor">#</a> 上传</h3> <p>将 4 个包上传到服务器</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>scp zheng-cms-rpc-service-assembly.tar.gz root@2.2.2.2:/zheng/upload/
+...
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code># 内容管理系统, 通过 ZhengUpmsRpcServiceApplication.main 方法启动服务提供者
+zheng-upms-rpc-service-assembly.tar.gz
+# 内容管理系统, 使用 jar 包的方式启动, 通过 ZhengCmsRpcServiceApplication 方法启动服务提供者
+zheng-cms-rpc-service-assembly.tar.gz
+# 用户权限系统及SSO服务端[端口:1111] 消费端 部属到 tomcat1 1111
+zheng-upms-server.war
+# 后台管理[端口:2222] 消费端 部属到 tomcat2 2222
+zheng-cms-admin.war
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br></div></div><h3 id="启动"><a href="#启动" aria-hidden="true" class="header-anchor">#</a> 启动</h3> <h4 id="提供者"><a href="#提供者" aria-hidden="true" class="header-anchor">#</a> 提供者</h4> <p>先解压 2 个包</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>zheng-cms-rpc-service-assembly.tar.gz
+zheng-upms-rpc-service-assembly.tar.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>tar -zxvf *.tar.gz
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>分别启动 <code>zheng-upms-rpc-service</code> 和 <code>zheng-cms-rpc-service</code></p> <p>使用对应目录下的 <code>bin/start.sh</code> 脚本</p> <h4 id="消费者"><a href="#消费者" aria-hidden="true" class="header-anchor">#</a> 消费者</h4> <p>删除 tomcat1[2]/webapps/ROOT 里的所有文件, 将 war 包分别拷入到 tomcat1 和 tomcat2 下的 webapps/ROOT,</p> <p>然后使用 unzip 解压</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>unzip *war
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>如果直接放入 webapps 下, 启动 tomcat 后会自动解压 war 包, 但是请求应用时, 就必须通过 <code>http://ip:port/应用名/资源路径</code> 的方式访问</p> <p>这里直接解压到 ROOT 目录下, 就不需要知道应用名.</p> <h3 id="完成"><a href="#完成" aria-hidden="true" class="header-anchor">#</a> 完成</h3> <p>由于是虚拟机, 地址为 2.2.2.2, 所以需要修改我<strong>本地</strong>的 hosts, 把 域名指向 2.2.2.2</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>2.2.2.2 ui.zhangshuzheng.cn
+2.2.2.2 upms.zhangshuzheng.cn
+2.2.2.2 cms.zhangshuzheng.cn
+2.2.2.2 pay.zhangshuzheng.cn
+2.2.2.2 ucenter.zhangshuzheng.cn
+2.2.2.2 wechat.zhangshuzheng.cn
+2.2.2.2 api.zhangshuzheng.cn
+2.2.2.2 oss.zhangshuzheng.cn
+2.2.2.2 config.zhangshuzheng.cn
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br></div></div><p>系统管理</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053793480517.jpg" alt=""></p> <p>组织管理</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053793790210.jpg" alt=""></p> <p>权限管理</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053794329559.jpg" alt=""></p> <p>Redis</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053804496668.jpg" alt=""></p> <p>Zookeeper</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053805326797.jpg" alt=""></p> <p>ActiveMQ</p> <p><img src="http://qiniu.dong4j.info/2019-07-03-15053806438938.jpg" alt=""></p> <h2 id="遇到的问题"><a href="#遇到的问题" aria-hidden="true" class="header-anchor">#</a> 遇到的问题</h2> <h3 id="hosts"><a href="#hosts" aria-hidden="true" class="header-anchor">#</a> hosts</h3> <p>本来是想不修改 hosts 来部署 zheng 的, 但是大概看了下代码, 发现很多域名和配置都是写死的, 还需要修改数据库, 改动会很大, 就没有心情修改了.</p> <p>但是 hosts 还是需要修改一下才能在服务器上使用.</p> <ol><li><p>修改 hosts , 将域名指向服务器 ip
+<strong>这部分是在本地修改</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code></code></pre> <div class="line-numbers-wrapper"></div></div></li></ol> <p>2.2.2.2 ui.zhangshuzheng.cn
+2.2.2.2 upms.zhangshuzheng.cn
+2.2.2.2 cms.zhangshuzheng.cn
+2.2.2.2 pay.zhangshuzheng.cn
+2.2.2.2 ucenter.zhangshuzheng.cn
+2.2.2.2 wechat.zhangshuzheng.cn
+2.2.2.2 api.zhangshuzheng.cn
+2.2.2.2 oss.zhangshuzheng.cn
+2.2.2.2 config.zhangshuzheng.cn</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>
+2. 将服务器依赖软件的 ip 指向服务器
+    **这部份是修改服务器的 hosts**
+    zookeeper, redis, activemq 都安装在 2.2.2.2 这台服务器上的
+    
+    ```
+127.0.0.1 zkserver
+127.0.0.1 rdserver
+# 127.0.0.1 dbserver mysql 的 地址修改为了我本地的 mysql 局域网地址是 192.168.31.28
+127.0.0.1 mqserver
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h3 id="dubbo-monitor"><a href="#dubbo-monitor" aria-hidden="true" class="header-anchor">#</a> dubbo-monitor</h3> <p><a href="http://git.oschina.net/handu/dubbo-monitor" target="_blank" rel="noopener noreferrer">韩都衣舍<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 的 dubbo-monitor 编译后不能直接用于 dubbo 2.5.3</p> <p>需要修改 pom.xml</p> <div class="language- line-numbers-mode"><pre class="language-text"><code># 由 2.8.4 修改为 2.5.3
+&lt;dubbo.version&gt;2.5.3&lt;/dubbo.version&gt;
+
+# 排除 dubbo 依赖的 旧版本的 spring
+&lt;dependency&gt;
+    &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+    &lt;artifactId&gt;dubbo&lt;/artifactId&gt;
+    &lt;version&gt;${dubbo.version}&lt;/version&gt;
+    &lt;exclusions&gt;
+        ...
+        &lt;exclusion&gt;
+            &lt;artifactId&gt;spring&lt;/artifactId&gt;
+            &lt;groupId&gt;org.springframework&lt;/groupId&gt;
+        &lt;/exclusion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;    
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div></div> <!----> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/4/2019, 1:15:31 PM</span></div></footer> <!----> </main> <div class="valine-wrapper" data-v-0162251c><div id="valine" data-v-0162251c></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-d0bfeaa4 data-v-d0bfeaa4><i class="iconfont reco-up" data-v-d0bfeaa4></i></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.23d4d300.js" defer></script><script src="/assets/js/4.28fd9624.js" defer></script><script src="/assets/js/1.928d15b1.js" defer></script><script src="/assets/js/18.6b597676.js" defer></script>
+  </body>
+</html>

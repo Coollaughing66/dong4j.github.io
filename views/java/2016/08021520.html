@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>深入理解 Java 内存模型-重排序 | Black House</title>
+    <meta name="description" content="代码千万行, 注释第一行, 编码不规范, 同事两行泪.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.35477964.css" as="style"><link rel="preload" href="/assets/js/app.23d4d300.js" as="script"><link rel="preload" href="/assets/js/4.28fd9624.js" as="script"><link rel="preload" href="/assets/js/1.928d15b1.js" as="script"><link rel="preload" href="/assets/js/51.de15920e.js" as="script"><link rel="prefetch" href="/assets/js/10.c2349238.js"><link rel="prefetch" href="/assets/js/100.031b764c.js"><link rel="prefetch" href="/assets/js/11.597103f4.js"><link rel="prefetch" href="/assets/js/12.01e326a5.js"><link rel="prefetch" href="/assets/js/13.6937eabc.js"><link rel="prefetch" href="/assets/js/14.0e95ab13.js"><link rel="prefetch" href="/assets/js/15.43c0e778.js"><link rel="prefetch" href="/assets/js/16.8c75ae64.js"><link rel="prefetch" href="/assets/js/17.02d12878.js"><link rel="prefetch" href="/assets/js/18.6b597676.js"><link rel="prefetch" href="/assets/js/19.524d893b.js"><link rel="prefetch" href="/assets/js/20.11686f52.js"><link rel="prefetch" href="/assets/js/21.ad025f0d.js"><link rel="prefetch" href="/assets/js/22.dca96777.js"><link rel="prefetch" href="/assets/js/23.121a28ab.js"><link rel="prefetch" href="/assets/js/24.99537c05.js"><link rel="prefetch" href="/assets/js/25.8f31fa14.js"><link rel="prefetch" href="/assets/js/26.a121c6cc.js"><link rel="prefetch" href="/assets/js/27.a57ec579.js"><link rel="prefetch" href="/assets/js/28.3f009b45.js"><link rel="prefetch" href="/assets/js/29.9c269e5b.js"><link rel="prefetch" href="/assets/js/30.168f09f3.js"><link rel="prefetch" href="/assets/js/31.ed454542.js"><link rel="prefetch" href="/assets/js/32.5f77ac76.js"><link rel="prefetch" href="/assets/js/33.3b921274.js"><link rel="prefetch" href="/assets/js/34.2e2dd8bc.js"><link rel="prefetch" href="/assets/js/35.457382a4.js"><link rel="prefetch" href="/assets/js/36.097474f8.js"><link rel="prefetch" href="/assets/js/37.2914dab3.js"><link rel="prefetch" href="/assets/js/38.bd900eff.js"><link rel="prefetch" href="/assets/js/39.00b0bb76.js"><link rel="prefetch" href="/assets/js/40.6d5aae82.js"><link rel="prefetch" href="/assets/js/41.e00929aa.js"><link rel="prefetch" href="/assets/js/42.b0c12805.js"><link rel="prefetch" href="/assets/js/43.7a60ce77.js"><link rel="prefetch" href="/assets/js/44.adf74ab9.js"><link rel="prefetch" href="/assets/js/45.36b6b8e2.js"><link rel="prefetch" href="/assets/js/46.a254f56a.js"><link rel="prefetch" href="/assets/js/47.aec9ad68.js"><link rel="prefetch" href="/assets/js/48.e3477ba7.js"><link rel="prefetch" href="/assets/js/49.5d974cde.js"><link rel="prefetch" href="/assets/js/5.c7e63593.js"><link rel="prefetch" href="/assets/js/50.c71471a2.js"><link rel="prefetch" href="/assets/js/52.1eabf9c1.js"><link rel="prefetch" href="/assets/js/53.ada4082c.js"><link rel="prefetch" href="/assets/js/54.985c146e.js"><link rel="prefetch" href="/assets/js/55.33da5078.js"><link rel="prefetch" href="/assets/js/56.8b899006.js"><link rel="prefetch" href="/assets/js/57.f7ea6441.js"><link rel="prefetch" href="/assets/js/58.55ca22b7.js"><link rel="prefetch" href="/assets/js/59.3b16a882.js"><link rel="prefetch" href="/assets/js/6.8843ac12.js"><link rel="prefetch" href="/assets/js/60.7365ec6c.js"><link rel="prefetch" href="/assets/js/61.0508510a.js"><link rel="prefetch" href="/assets/js/62.8c3a0bf0.js"><link rel="prefetch" href="/assets/js/63.99503945.js"><link rel="prefetch" href="/assets/js/64.1193b17d.js"><link rel="prefetch" href="/assets/js/65.40a7b476.js"><link rel="prefetch" href="/assets/js/66.c95c74fb.js"><link rel="prefetch" href="/assets/js/67.dcc1ce00.js"><link rel="prefetch" href="/assets/js/68.e8aeba6d.js"><link rel="prefetch" href="/assets/js/69.13b69234.js"><link rel="prefetch" href="/assets/js/7.cda98f34.js"><link rel="prefetch" href="/assets/js/70.2308210c.js"><link rel="prefetch" href="/assets/js/71.bdac7c88.js"><link rel="prefetch" href="/assets/js/72.d5e7dabc.js"><link rel="prefetch" href="/assets/js/73.f1cec72d.js"><link rel="prefetch" href="/assets/js/74.13cbda62.js"><link rel="prefetch" href="/assets/js/75.5ec77696.js"><link rel="prefetch" href="/assets/js/76.e80c98fb.js"><link rel="prefetch" href="/assets/js/77.edf10bf3.js"><link rel="prefetch" href="/assets/js/78.9472aec2.js"><link rel="prefetch" href="/assets/js/79.2f59f6d2.js"><link rel="prefetch" href="/assets/js/8.64e66a3d.js"><link rel="prefetch" href="/assets/js/80.9d9b311d.js"><link rel="prefetch" href="/assets/js/81.112c831f.js"><link rel="prefetch" href="/assets/js/82.e98222ae.js"><link rel="prefetch" href="/assets/js/83.a7741563.js"><link rel="prefetch" href="/assets/js/84.47f9ec86.js"><link rel="prefetch" href="/assets/js/85.4b288089.js"><link rel="prefetch" href="/assets/js/86.d01d1b2a.js"><link rel="prefetch" href="/assets/js/87.26f71539.js"><link rel="prefetch" href="/assets/js/88.0cdca4ad.js"><link rel="prefetch" href="/assets/js/89.fca9f86b.js"><link rel="prefetch" href="/assets/js/9.8fcc4a9b.js"><link rel="prefetch" href="/assets/js/90.49e1e9ad.js"><link rel="prefetch" href="/assets/js/91.58ec2d07.js"><link rel="prefetch" href="/assets/js/92.0da2a72c.js"><link rel="prefetch" href="/assets/js/93.9d312aaf.js"><link rel="prefetch" href="/assets/js/94.e94db684.js"><link rel="prefetch" href="/assets/js/95.ed2aa34a.js"><link rel="prefetch" href="/assets/js/96.6a2e264d.js"><link rel="prefetch" href="/assets/js/97.8a055f18.js"><link rel="prefetch" href="/assets/js/98.1284385e.js"><link rel="prefetch" href="/assets/js/99.830ddc7a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3ceaf8af.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35477964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="Black House" class="logo"> <span class="site-name">Black House</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>深入理解 Java 内存模型-重排序</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/java/2016/08021520.html#数据依赖性" class="sidebar-link">数据依赖性</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>深入理解 Java 内存模型-重排序</h1> <hr> <div data-v-0b496ca7><i class="iconfont reco-account" data-v-0b496ca7><span data-v-0b496ca7>weakish</span></i> <i class="iconfont reco-date" data-v-0b496ca7><span data-v-0b496ca7>8/2/2016</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0b496ca7><span class="tag-item" data-v-0b496ca7>
+      JavaSE
+    </span><span class="tag-item" data-v-0b496ca7>
+      JVM
+    </span><span class="tag-item" data-v-0b496ca7>
+      JMM
+    </span></i></div></div> <div class="content__default"><div class="tip custom-block"><p>Java编译器、运行时会对指令进行重排序. 这种重排序在单线程和多线程情况下分别有什么影响呢？</p></div> <p><a href="https://segmentfault.com/a/1190000000448896" target="_blank" rel="noopener noreferrer">原文出处 https://segmentfault.com/a/1190000000448896<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="数据依赖性"><a href="#数据依赖性" aria-hidden="true" class="header-anchor">#</a> 数据依赖性</h2> <p>如果两个操作访问同一个变量, 且这两个操作中有一个为写操作, 此时这两个操作之间就存在数据依赖性. 数据依赖分下列三种类型:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>-------- -------------- -------------------------------
+名称     代码示例       说明
+写后读   a = 1;b = a;   写一个变量之后, 再读这个位置. 
+写后写   a = 1;a = 2;   写一个变量之后, 再写这个变量. 
+读后写   a = b;b = 1;   读一个变量之后, 再写这个变量. 
+-------- -------------- -------------------------------
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><p>上面三种情况, 只要重排序两个操作的执行顺序, 程序的执行结果将会被改变.</p> <p>前面提到过, 编译器和处理器可能会对操作做重排序. 编译器和处理器在重排序时, 会遵守数据依赖性, 编译器和处理器不会改变存在数据依赖关系的两个操作的执行顺序.</p> <p>注意, 这里所说的数据依赖性仅针对单个处理器中执行的指令序列和单个线程中执行的操作, 不同处理器之间和不同线程之间的数据依赖性不被编译器和处理器考虑.</p> <h1 id="as-if-serial语义"><a href="#as-if-serial语义" aria-hidden="true" class="header-anchor">#</a> as-if-serial语义</h1> <p>as-if-serial语义的意思指: 不管怎么重排序（编译器和处理器为了提高并行度）, （单线程）程序的执行结果不能被改变. 编译器, runtime 和处理器都必须遵守as-if-serial语义.</p> <p>为了遵守as-if-serial语义, 编译器和处理器不会对存在数据依赖关系的操作做重排序, 因为这种重排序会改变执行结果. 但是, 如果操作之间不存在数据依赖关系, 这些操作可能被编译器和处理器重排序. 为了具体说明, 请看下面计算圆面积的代码示例:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">double</span> pi  <span class="token operator">=</span> <span class="token number">3.14</span><span class="token punctuation">;</span>    <span class="token comment">//A</span>
+<span class="token keyword">double</span> r   <span class="token operator">=</span> <span class="token number">1.0</span><span class="token punctuation">;</span>     <span class="token comment">//B</span>
+<span class="token keyword">double</span> area <span class="token operator">=</span> pi <span class="token operator">*</span> r <span class="token operator">*</span> r<span class="token punctuation">;</span> <span class="token comment">//C</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>上面三个操作的数据依赖关系如下图所示:</p> <p><img src="http://qiniu.dong4j.info/2019-07-02-bVb2V1.." alt=""></p> <p>如上图所示, A和C之间存在数据依赖关系, 同时B和C之间也存在数据依赖关系. 因此在最终执行的指令序列中, C不能被重排序到A和B的前面（C排到A和B的前面, 程序的结果将会被改变）. 但A和B之间没有数据依赖关系, 编译器和处理器可以重排序A和B之间的执行顺序. 下图是该程序的两种执行顺序:</p> <p><img src="http://qiniu.dong4j.info/2019-07-02-bVb2V3.." alt=""></p> <p>as-if-serial语义把单线程程序保护了起来, 遵守as-if-serial语义的编译器, runtime 和处理器共同为编写单线程程序的程序员创建了一个幻觉: 单线程程序是按程序的顺序来执行的. as-if-serial语义使单线程程序员无需担心重排序会干扰他们, 也无需担心内存可见性问题.</p> <h1 id="程序顺序规则"><a href="#程序顺序规则" aria-hidden="true" class="header-anchor">#</a> 程序顺序规则</h1> <p>根据happens-before的程序顺序规则, 上面计算圆的面积的示例代码存在三个happens-
+before关系:</p> <ol><li>A happens-before B；</li> <li>B happens-before C；</li> <li>A happens-before C；</li></ol> <p>这里的第3个happens-before关系, 是根据happens-before的传递性推导出来的.</p> <p>这里A happens-before B, 但实际执行时B却可以排在A之前执行（看上面的重排序后的执行顺序）. 在第一章提到过, 如果A happens-before B, JMM并不要求A一定要在B之前执行. JMM仅仅要求前一个操作（执行的结果）对后一个操作可见, 且前一个操作按顺序排在第二个操作之前. 这里操作A的执行结果不需要对操作B可见；而且重排序操作A和操作B后的执行结果, 与操作A和操作B按happens- before顺序执行的结果一致. 在这种情况下, JMM会认为这种重排序并不非法（not illegal）, JMM允许这种重排序.</p> <p>在计算机中, 软件技术和硬件技术有一个共同的目标: 在不改变程序执行结果的前提下, 尽可能的开发并行度. 编译器和处理器遵从这一目标, 从happens-before的定义我们可以看出, JMM同样遵从这一目标.</p> <h1 id="重排序对多线程的影响"><a href="#重排序对多线程的影响" aria-hidden="true" class="header-anchor">#</a> 重排序对多线程的影响</h1> <p>现在让我们来看看, 重排序是否会改变多线程程序的执行结果. 请看下面的示例代码:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">ReorderExample</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>                   <span class="token comment">//1</span>
+        flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>             <span class="token comment">//2</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token class-name">Public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span>                <span class="token comment">//3</span>
+            <span class="token keyword">int</span> i <span class="token operator">=</span>  a <span class="token operator">*</span> a<span class="token punctuation">;</span>        <span class="token comment">//4</span>
+            ……
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br></div></div><p>flag变量是个标记, 用来标识变量a是否已被写入. 这里假设有两个线程A和B, A首先执行writer()方法, 随后B线程接着执行reader()方法. 线程B在执行操作4时, 能否看到线程A在操作1对共享变量a的写入？</p> <p>答案是: 不一定能看到.</p> <p>由于操作1和操作2没有数据依赖关系, 编译器和处理器可以对这两个操作重排序；同样, 操作3和操作4没有数据依赖关系, 编译器和处理器也可以对这两个操作重排序. 让我们先来看看, 当操作1和操作2重排序时, 可能会产生什么效果？请看下面的程序执行时序图:</p> <p><img src="http://qiniu.dong4j.info/2019-07-02-bVb2V7.." alt=""></p> <p>如上图所示, 操作1和操作2做了重排序. 程序执行时, 线程A首先写标记变量flag, 随后线程B读这个变量. 由于条件判断为真, 线程B将读取变量a. 此时, 变量a还根本没有被线程A写入, 在这里多线程程序的语义被重排序破坏了！</p> <p>※注: 本文统一用红色的虚箭线表示错误的读操作, 用绿色的虚箭线表示正确的读操作.</p> <p>下面再让我们看看, 当操作3和操作4重排序时会产生什么效果（借助这个重排序, 可以顺便说明控制依赖性）. 下面是操作3和操作4重排序后, 程序的执行时序图:</p> <p><img src="http://qiniu.dong4j.info/2019-07-02-bVb2V8.." alt=""></p> <p>在程序中, 操作3和操作4存在控制依赖关系. 当代码中存在控制依赖性时, 会影响指令序列执行的并行度. 为此, 编译器和处理器会采用猜测（Speculation）执行来克服控制相关性对并行度的影响. 以处理器的猜测执行为例, 执行线程B的处理器可以提前读取并计算<code>a*a</code>, 然后把计算结果临时保存到一个名为重排序缓冲（reorder buffer ROB）的硬件缓存中. 当接下来操作3的条件判断为真时, 就把该计算结果写入变量i中.</p> <p>从图中我们可以看出, 猜测执行实质上对操作3和4做了重排序. 重排序在这里破坏了多线程程序的语义！</p> <p>在单线程程序中, 对存在控制依赖的操作重排序, 不会改变执行结果（这也是as-if-serial语义允许对存在控制依赖的操作做重排序的原因）；但在多线程程序中, 对存在控制依赖的操作重排序, 可能会改变程序的执行结果.</p></div> <!----> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/3/2019, 6:17:56 PM</span></div></footer> <!----> </main> <div class="valine-wrapper" data-v-0162251c><div id="valine" data-v-0162251c></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-d0bfeaa4 data-v-d0bfeaa4><i class="iconfont reco-up" data-v-d0bfeaa4></i></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.23d4d300.js" defer></script><script src="/assets/js/4.28fd9624.js" defer></script><script src="/assets/js/1.928d15b1.js" defer></script><script src="/assets/js/51.de15920e.js" defer></script>
+  </body>
+</html>

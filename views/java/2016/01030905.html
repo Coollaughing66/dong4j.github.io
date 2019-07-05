@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>对 volatile 的认识 | Black House</title>
+    <meta name="description" content="代码千万行, 注释第一行, 编码不规范, 同事两行泪.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.35477964.css" as="style"><link rel="preload" href="/assets/js/app.23d4d300.js" as="script"><link rel="preload" href="/assets/js/4.28fd9624.js" as="script"><link rel="preload" href="/assets/js/1.928d15b1.js" as="script"><link rel="preload" href="/assets/js/41.e00929aa.js" as="script"><link rel="prefetch" href="/assets/js/10.c2349238.js"><link rel="prefetch" href="/assets/js/100.031b764c.js"><link rel="prefetch" href="/assets/js/11.597103f4.js"><link rel="prefetch" href="/assets/js/12.01e326a5.js"><link rel="prefetch" href="/assets/js/13.6937eabc.js"><link rel="prefetch" href="/assets/js/14.0e95ab13.js"><link rel="prefetch" href="/assets/js/15.43c0e778.js"><link rel="prefetch" href="/assets/js/16.8c75ae64.js"><link rel="prefetch" href="/assets/js/17.02d12878.js"><link rel="prefetch" href="/assets/js/18.6b597676.js"><link rel="prefetch" href="/assets/js/19.524d893b.js"><link rel="prefetch" href="/assets/js/20.11686f52.js"><link rel="prefetch" href="/assets/js/21.ad025f0d.js"><link rel="prefetch" href="/assets/js/22.dca96777.js"><link rel="prefetch" href="/assets/js/23.121a28ab.js"><link rel="prefetch" href="/assets/js/24.99537c05.js"><link rel="prefetch" href="/assets/js/25.8f31fa14.js"><link rel="prefetch" href="/assets/js/26.a121c6cc.js"><link rel="prefetch" href="/assets/js/27.a57ec579.js"><link rel="prefetch" href="/assets/js/28.3f009b45.js"><link rel="prefetch" href="/assets/js/29.9c269e5b.js"><link rel="prefetch" href="/assets/js/30.168f09f3.js"><link rel="prefetch" href="/assets/js/31.ed454542.js"><link rel="prefetch" href="/assets/js/32.5f77ac76.js"><link rel="prefetch" href="/assets/js/33.3b921274.js"><link rel="prefetch" href="/assets/js/34.2e2dd8bc.js"><link rel="prefetch" href="/assets/js/35.457382a4.js"><link rel="prefetch" href="/assets/js/36.097474f8.js"><link rel="prefetch" href="/assets/js/37.2914dab3.js"><link rel="prefetch" href="/assets/js/38.bd900eff.js"><link rel="prefetch" href="/assets/js/39.00b0bb76.js"><link rel="prefetch" href="/assets/js/40.6d5aae82.js"><link rel="prefetch" href="/assets/js/42.b0c12805.js"><link rel="prefetch" href="/assets/js/43.7a60ce77.js"><link rel="prefetch" href="/assets/js/44.adf74ab9.js"><link rel="prefetch" href="/assets/js/45.36b6b8e2.js"><link rel="prefetch" href="/assets/js/46.a254f56a.js"><link rel="prefetch" href="/assets/js/47.aec9ad68.js"><link rel="prefetch" href="/assets/js/48.e3477ba7.js"><link rel="prefetch" href="/assets/js/49.5d974cde.js"><link rel="prefetch" href="/assets/js/5.c7e63593.js"><link rel="prefetch" href="/assets/js/50.c71471a2.js"><link rel="prefetch" href="/assets/js/51.de15920e.js"><link rel="prefetch" href="/assets/js/52.1eabf9c1.js"><link rel="prefetch" href="/assets/js/53.ada4082c.js"><link rel="prefetch" href="/assets/js/54.985c146e.js"><link rel="prefetch" href="/assets/js/55.33da5078.js"><link rel="prefetch" href="/assets/js/56.8b899006.js"><link rel="prefetch" href="/assets/js/57.f7ea6441.js"><link rel="prefetch" href="/assets/js/58.55ca22b7.js"><link rel="prefetch" href="/assets/js/59.3b16a882.js"><link rel="prefetch" href="/assets/js/6.8843ac12.js"><link rel="prefetch" href="/assets/js/60.7365ec6c.js"><link rel="prefetch" href="/assets/js/61.0508510a.js"><link rel="prefetch" href="/assets/js/62.8c3a0bf0.js"><link rel="prefetch" href="/assets/js/63.99503945.js"><link rel="prefetch" href="/assets/js/64.1193b17d.js"><link rel="prefetch" href="/assets/js/65.40a7b476.js"><link rel="prefetch" href="/assets/js/66.c95c74fb.js"><link rel="prefetch" href="/assets/js/67.dcc1ce00.js"><link rel="prefetch" href="/assets/js/68.e8aeba6d.js"><link rel="prefetch" href="/assets/js/69.13b69234.js"><link rel="prefetch" href="/assets/js/7.cda98f34.js"><link rel="prefetch" href="/assets/js/70.2308210c.js"><link rel="prefetch" href="/assets/js/71.bdac7c88.js"><link rel="prefetch" href="/assets/js/72.d5e7dabc.js"><link rel="prefetch" href="/assets/js/73.f1cec72d.js"><link rel="prefetch" href="/assets/js/74.13cbda62.js"><link rel="prefetch" href="/assets/js/75.5ec77696.js"><link rel="prefetch" href="/assets/js/76.e80c98fb.js"><link rel="prefetch" href="/assets/js/77.edf10bf3.js"><link rel="prefetch" href="/assets/js/78.9472aec2.js"><link rel="prefetch" href="/assets/js/79.2f59f6d2.js"><link rel="prefetch" href="/assets/js/8.64e66a3d.js"><link rel="prefetch" href="/assets/js/80.9d9b311d.js"><link rel="prefetch" href="/assets/js/81.112c831f.js"><link rel="prefetch" href="/assets/js/82.e98222ae.js"><link rel="prefetch" href="/assets/js/83.a7741563.js"><link rel="prefetch" href="/assets/js/84.47f9ec86.js"><link rel="prefetch" href="/assets/js/85.4b288089.js"><link rel="prefetch" href="/assets/js/86.d01d1b2a.js"><link rel="prefetch" href="/assets/js/87.26f71539.js"><link rel="prefetch" href="/assets/js/88.0cdca4ad.js"><link rel="prefetch" href="/assets/js/89.fca9f86b.js"><link rel="prefetch" href="/assets/js/9.8fcc4a9b.js"><link rel="prefetch" href="/assets/js/90.49e1e9ad.js"><link rel="prefetch" href="/assets/js/91.58ec2d07.js"><link rel="prefetch" href="/assets/js/92.0da2a72c.js"><link rel="prefetch" href="/assets/js/93.9d312aaf.js"><link rel="prefetch" href="/assets/js/94.e94db684.js"><link rel="prefetch" href="/assets/js/95.ed2aa34a.js"><link rel="prefetch" href="/assets/js/96.6a2e264d.js"><link rel="prefetch" href="/assets/js/97.8a055f18.js"><link rel="prefetch" href="/assets/js/98.1284385e.js"><link rel="prefetch" href="/assets/js/99.830ddc7a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3ceaf8af.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35477964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="Black House" class="logo"> <span class="site-name">Black House</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>对 volatile 的认识</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/java/2016/01030905.html#可见性" class="sidebar-link">可见性</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/java/2016/01030905.html#volatile的禁止指令重排序" class="sidebar-link">volatile的禁止指令重排序</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/java/2016/01030905.html#有序性" class="sidebar-link">有序性</a></li><li class="sidebar-sub-header"><a href="/views/java/2016/01030905.html#happen-before" class="sidebar-link">Happen-Before</a></li><li class="sidebar-sub-header"><a href="/views/java/2016/01030905.html#volatile-禁止指令重排的两层含义" class="sidebar-link">volatile 禁止指令重排的两层含义</a></li></ul></li><li><a href="/views/java/2016/01030905.html#vloatile-的并发问题" class="sidebar-link">vloatile 的并发问题</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>对 volatile 的认识</h1> <hr> <div data-v-0b496ca7><i class="iconfont reco-account" data-v-0b496ca7><span data-v-0b496ca7>dong4j</span></i> <i class="iconfont reco-date" data-v-0b496ca7><span data-v-0b496ca7>1/9/2016</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0b496ca7><span class="tag-item" data-v-0b496ca7>
+      JavaSE
+    </span><span class="tag-item" data-v-0b496ca7>
+      JVM
+    </span></i></div></div> <div class="content__default"><div class="tip custom-block"><p>volatile 关键字的 2 个语义</p> <ul><li>内存可见性</li> <li>阻止重排序</li></ul> <p>volatile 不能保证原子性</p></div> <p><strong>volatile 关键字的2层含义:</strong></p> <p>用volatile修饰的变量, 线程在每次使用变量的时候, 都会读取变量修改后的最新的值.
+作为指令关键字, 确保本条指令不会因编译器的优化而省略, 且要求每次直接读值.</p> <h2 id="可见性"><a href="#可见性" aria-hidden="true" class="header-anchor">#</a> 可见性</h2> <p>可见性是指 当一个线程修改了一个共享变量,其他线程能够立刻得知这个修改.
+这里有必要了解一下 Java 的内存模型</p> <p><img src="http://qiniu.dong4j.info/006y8lVagw1fbd6lm7oc0j30br0ahmxc.jpg" alt=""></p> <p>被 volatile 修饰的变量,当线程需要使用这个变量时,回去主内存中读取,然后加载到自己的工作线程中,
+工作线程中的变量只是主存变量的一个拷贝,当使用完这个变量后,会刷新会主存中.</p> <p><img src="http://qiniu.dong4j.info/006y8lVagw1fbd6ur604jj30mq0hcaac.jpg" alt=""></p> <p>当数据中主内存复制到工作内存存储时,必须出现两个动作:</p> <ol><li>由主内存执行的 read 操作</li> <li>有工作内存执行相应的 load 操作</li></ol> <p>当数据从工作内存拷贝到主内存时,也会有两个操作:</p> <ol><li>用工作内存执行的 store 操作</li> <li>用主内存执行相应的 write 操作</li></ol> <p>volatile的特殊规则就是read、load、use必须连续出现. assign、store、write动作必须连续出现. 所以使用volatile变量能够保证必须先从主内存刷新最新的值, 每次修改后必须立即同步回主内存当中.</p> <p>所以 colatile 的可见性很适合用来控制并发:</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">VolatileDemo</span> <span class="token punctuation">{</span>
+	<span class="token keyword">private</span> <span class="token keyword">static</span> <span class="token keyword">volatile</span> <span class="token keyword">boolean</span> flag<span class="token punctuation">;</span>  
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>   
+		flag<span class="token operator">=</span><span class="token boolean">true</span><span class="token punctuation">;</span>  
+	<span class="token punctuation">}</span>  
+	<span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token class-name">String</span><span class="token punctuation">[</span><span class="token punctuation">]</span> args<span class="token punctuation">)</span> <span class="token keyword">throws</span> <span class="token class-name">InterruptedException</span><span class="token punctuation">{</span>  
+		<span class="token class-name">VolatileDemo</span> m <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">VolatileDemo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+		<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">20</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>  
+			<span class="token keyword">new</span> <span class="token class-name">Thread</span><span class="token punctuation">(</span><span class="token keyword">new</span> <span class="token class-name">Runnable</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>               
+				<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">run</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>  
+					<span class="token keyword">while</span><span class="token punctuation">(</span><span class="token operator">!</span>flag<span class="token punctuation">)</span><span class="token punctuation">{</span>  
+						  <span class="token class-name">System</span><span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">&quot;aaa&quot;</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+					<span class="token punctuation">}</span>  
+				<span class="token punctuation">}</span>  
+			<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">start</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>  
+		<span class="token punctuation">}</span>
+		<span class="token class-name">Thread</span><span class="token punctuation">.</span><span class="token function">sleep</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+		<span class="token function">shutdown</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span>  
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br></div></div><p>当调用 shutdown() 时,能保证所有线程立刻停止.</p> <h2 id="volatile的禁止指令重排序"><a href="#volatile的禁止指令重排序" aria-hidden="true" class="header-anchor">#</a> volatile的禁止指令重排序</h2> <p>指令重排是 编译器和 cup 在不影响执行结果的情况下,进行的一种优化策略.</p> <p>在Java中普遍的变量仅仅会保证在该方法的执行过程中所有依赖的赋值结果的地方都能获取到正确的结果, 而不能保证变量赋值操作的顺序与程序代码中的执行顺序一致. 因为在一个线程的方法执行过程中无法感知到这点, 这也就是Java内存模型中描述的所谓“线程内表现为串行的语义”.</p> <h3 id="有序性"><a href="#有序性" aria-hidden="true" class="header-anchor">#</a> 有序性</h3> <p>计算机在执行代码时,不一定按照程序的顺序来执行.</p> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token keyword">class</span> <span class="token class-name">OrderExample</span> <span class="token punctuation">{</span> 
+	<span class="token keyword">int</span> a <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> 
+	<span class="token keyword">boolean</span> flag <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span> 
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">writer</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+		a <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> 
+		flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> 
+	<span class="token punctuation">}</span> 
+	<span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">reader</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+		<span class="token keyword">if</span> <span class="token punctuation">(</span>flag<span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+			<span class="token keyword">int</span> i <span class="token operator">=</span> a <span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">;</span>  
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span> 
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><p>比如上述代码, 两个方法分别被两个线程调用.
+按照常理, 写线程应该先执行a=1, 再执行flag=true.
+当读线程进行读的时候, i=2；
+但是因为a=1和flag=true, 并没有逻辑上的关联.
+所以有可能执行的顺序颠倒, 有可能先执行flag=true, 再执行a=1.
+这时当flag=true时, 切换到读线程, 此时a=1还没有执行, 那么读线程将i=1.</p> <p><strong>指令重排可以使流水线更加顺畅</strong></p> <p>当然指令重排的原则是不能破坏串行程序的语义, 例如a=1,b=a+1, 这种指令就不会重排了, 因为重排的串行结果和原先的不同.</p> <p>在Java里面, 可以通过volatile关键字来保证一定的“有序性”. 另外可以通过synchronized和Lock来保证有序性, 很显然, synchronized和Lock保证每个时刻是有一个线程执行同步代码, 相当于是让线程顺序执行同步代码, 自然就保证了有序性.</p> <h3 id="happen-before"><a href="#happen-before" aria-hidden="true" class="header-anchor">#</a> Happen-Before</h3> <p>Java内存模型具备一些先天的“有序性”, 即不需要通过任何手段就能够得到保证的有序性, 这个通常也称为 happen-before 原则. 如果两个操作的执行次序无法从happen-before原则推导出来, 那么它们就不能保证它们的有序性, 虚拟机可以随意地对它们进行重排序.</p> <ul><li>程序顺序原则: 一个线程内保证语义的串行性(写在前面的先发生,用来保证单线程结果的正确性)</li> <li>volatile规则: volatile变量的写, 先发生于读, 这保证了volatile变量的可见性</li> <li>锁规则: 解锁（unlock）必然发生在随后的加锁（lock）前</li> <li>传递性: A先于B, B先于C, 那么A必然先于C</li> <li>线程的start()方法先于它的每一个动作</li> <li>线程的所有操作先于线程的终结（Thread.join()）</li> <li>线程的中断（interrupt()）先于被中断线程的代码</li> <li>对象的构造函数执行结束先于finalize()方法</li></ul> <p><strong>为什么 Happen-Before 原则不被指令重排影响?</strong>
+例如你让一个volatile的integer自增（i++）, 其实要分成3步: 1）读取volatile变量值到local； 2）增加变量的值；3）把local的值写回, 让其它的线程可见. 这3步的jvm指令为:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mov   
+0xc(%r10),%r8d
+ ; Load
+inc   
+ %r8d           ; Increment
+mov   
+ %r8d,0xc(%r10)
+ ; Store
+lock
+ addl $0x0,(%rsp)
+ ; StoreLoad Barrier
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br></div></div><p>StoreLoad Barrier 就是内存屏障</p> <p>内存屏障（memory barrier）是一个CPU指令. 基本上, 它是这样一条指令:</p> <ol><li>确保一些特定操作执行的顺序；</li> <li>影响一些数据的可见性(可能是某些指令执行后的结果).</li></ol> <p>编译器和CPU可以在保证输出结果一样的情况下对指令重排序, 使性能得到优化.
+插入一个内存屏障, 相当于告诉CPU和编译器先于这个命令的必须先执行, 后于这个命令的必须后执行.</p> <p>内存屏障另一个作用是强制更新一次不同CPU的缓存.</p> <p>例如, 一个写屏障会把这个屏障前写入的数据刷新到缓存, 这样任何试图读取该数据的线程将得到最新值, 而不用考虑到底是被哪个cpu核心或者哪颗CPU执行的.</p> <p><strong>内存屏障和 volatile 的关系</strong></p> <p>上面的虚拟机指令里面有提到, 如果你的字段是volatile, Java内存模型将在写操作后插入一个<strong>写屏障指令</strong>, 在读操作前插入一个<strong>读屏障指令</strong>.
+这意味着如果你对一个volatile字段进行写操作, 你必须知道:</p> <ol><li>一旦你完成写入, 任何访问这个字段的线程将会得到最新的值.</li> <li>在你写入前, 会保证所有之前发生的事已经发生, 并且任何更新过的数据值也是可见的, 因为内存屏障会把之前的写入值都刷新到缓存.</li></ol> <p>明白了内存屏障这个CPU指令, 回到前面的JVM指令: 从load 到 use 到 assign 到 store到内存屏障, 一共4步, 其中最后一步jvm让这个最新的变量的值在所有线程可见, 也就是最后一步让所有的CPU内核都获得了最新的值, 但中间的几步（从Load到Store）是不安全的, 中间如果其他的CPU修改了值将会丢失.</p> <h3 id="volatile-禁止指令重排的两层含义"><a href="#volatile-禁止指令重排的两层含义" aria-hidden="true" class="header-anchor">#</a> volatile 禁止指令重排的两层含义</h3> <ol><li>当程序执行到 volatile 变量的读操作或者写操作时,在其前面的操作肯定已经全部进行,且结果对后面的操作可见;且后面的操作还没有进行;</li> <li>在进行指令优化时,不能将对 volatile 变量的访问语句放在气候执行,也不能把 volatile 变量后面的语句放在其前面执行.</li></ol> <div class="language-java line-numbers-mode"><pre class="language-java"><code><span class="token comment">//x、y为非volatile变量  </span>
+<span class="token comment">//flag为volatile变量  </span>
+x <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span>          <span class="token comment">//语句1  </span>
+y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>          <span class="token comment">//语句2  </span>
+flag <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span>  <span class="token comment">//语句3  </span>
+x <span class="token operator">=</span> <span class="token number">4</span><span class="token punctuation">;</span>          <span class="token comment">//语句4  </span>
+y <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>         <span class="token comment">//语句5 </span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p>由于flag变量为volatile变量, 那么在进行指令重排序的过程的时候, 不会将语句3放到语句1、语句2前面, 也不会讲语句3放到语句4、语句5后面. 但是要注意语句1和语句2的顺序、语句4和语句5的顺序是不作任何保证的.</p> <p>并且volatile关键字能保证, 执行到语句3时, 语句1和语句2必定是执行完毕了的, 且语句1和语句2的执行结果对语句3、语句4、语句5是可见的</p> <h2 id="vloatile-的并发问题"><a href="#vloatile-的并发问题" aria-hidden="true" class="header-anchor">#</a> vloatile 的并发问题</h2> <p>volatile 能保证可见性和禁止指令重排,但是却不能保证原子性,
+其实通过上面的分析也能得出这个结论.</p> <p>比如 i++操作:</p> <ol><li>读取 volatile 变量值到当前线程的工作内存中</li> <li>进行 i+1 计算</li> <li>将工作内存中的值写会到主内存,让其他线程可见</li></ol> <p>现在有2个线程同时对 volatile 变量进行操作,
+当第一个变量从主内存中读取了变量,但是还未进行 i+1 操作,
+此时第二个线程也从主存中读取了这个变量,但是和线程一读取的值一样,因为线程一还未将计算过的值刷新到主内存中,此时2个线程都对变量进行+1操作,然后刷新到主内存,此时,主内存中的值只是做了一次+1操作,而不是2次.</p> <p>**某个线程将一个共享值优化到了内存中, 而另一个线程将这个共享值优化到了缓存中, 当修改内存中值的时候, 缓存中的值是不知道这个修改的. **</p></div> <!----> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/3/2019, 6:17:56 PM</span></div></footer> <!----> </main> <div class="valine-wrapper" data-v-0162251c><div id="valine" data-v-0162251c></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-d0bfeaa4 data-v-d0bfeaa4><i class="iconfont reco-up" data-v-d0bfeaa4></i></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.23d4d300.js" defer></script><script src="/assets/js/4.28fd9624.js" defer></script><script src="/assets/js/1.928d15b1.js" defer></script><script src="/assets/js/41.e00929aa.js" defer></script>
+  </body>
+</html>

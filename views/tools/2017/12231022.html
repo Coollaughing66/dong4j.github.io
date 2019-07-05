@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>apidoc 教程 | Black House</title>
+    <meta name="description" content="代码千万行, 注释第一行, 编码不规范, 同事两行泪.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.35477964.css" as="style"><link rel="preload" href="/assets/js/app.23d4d300.js" as="script"><link rel="preload" href="/assets/js/4.28fd9624.js" as="script"><link rel="preload" href="/assets/js/1.928d15b1.js" as="script"><link rel="preload" href="/assets/js/89.fca9f86b.js" as="script"><link rel="prefetch" href="/assets/js/10.c2349238.js"><link rel="prefetch" href="/assets/js/100.031b764c.js"><link rel="prefetch" href="/assets/js/11.597103f4.js"><link rel="prefetch" href="/assets/js/12.01e326a5.js"><link rel="prefetch" href="/assets/js/13.6937eabc.js"><link rel="prefetch" href="/assets/js/14.0e95ab13.js"><link rel="prefetch" href="/assets/js/15.43c0e778.js"><link rel="prefetch" href="/assets/js/16.8c75ae64.js"><link rel="prefetch" href="/assets/js/17.02d12878.js"><link rel="prefetch" href="/assets/js/18.6b597676.js"><link rel="prefetch" href="/assets/js/19.524d893b.js"><link rel="prefetch" href="/assets/js/20.11686f52.js"><link rel="prefetch" href="/assets/js/21.ad025f0d.js"><link rel="prefetch" href="/assets/js/22.dca96777.js"><link rel="prefetch" href="/assets/js/23.121a28ab.js"><link rel="prefetch" href="/assets/js/24.99537c05.js"><link rel="prefetch" href="/assets/js/25.8f31fa14.js"><link rel="prefetch" href="/assets/js/26.a121c6cc.js"><link rel="prefetch" href="/assets/js/27.a57ec579.js"><link rel="prefetch" href="/assets/js/28.3f009b45.js"><link rel="prefetch" href="/assets/js/29.9c269e5b.js"><link rel="prefetch" href="/assets/js/30.168f09f3.js"><link rel="prefetch" href="/assets/js/31.ed454542.js"><link rel="prefetch" href="/assets/js/32.5f77ac76.js"><link rel="prefetch" href="/assets/js/33.3b921274.js"><link rel="prefetch" href="/assets/js/34.2e2dd8bc.js"><link rel="prefetch" href="/assets/js/35.457382a4.js"><link rel="prefetch" href="/assets/js/36.097474f8.js"><link rel="prefetch" href="/assets/js/37.2914dab3.js"><link rel="prefetch" href="/assets/js/38.bd900eff.js"><link rel="prefetch" href="/assets/js/39.00b0bb76.js"><link rel="prefetch" href="/assets/js/40.6d5aae82.js"><link rel="prefetch" href="/assets/js/41.e00929aa.js"><link rel="prefetch" href="/assets/js/42.b0c12805.js"><link rel="prefetch" href="/assets/js/43.7a60ce77.js"><link rel="prefetch" href="/assets/js/44.adf74ab9.js"><link rel="prefetch" href="/assets/js/45.36b6b8e2.js"><link rel="prefetch" href="/assets/js/46.a254f56a.js"><link rel="prefetch" href="/assets/js/47.aec9ad68.js"><link rel="prefetch" href="/assets/js/48.e3477ba7.js"><link rel="prefetch" href="/assets/js/49.5d974cde.js"><link rel="prefetch" href="/assets/js/5.c7e63593.js"><link rel="prefetch" href="/assets/js/50.c71471a2.js"><link rel="prefetch" href="/assets/js/51.de15920e.js"><link rel="prefetch" href="/assets/js/52.1eabf9c1.js"><link rel="prefetch" href="/assets/js/53.ada4082c.js"><link rel="prefetch" href="/assets/js/54.985c146e.js"><link rel="prefetch" href="/assets/js/55.33da5078.js"><link rel="prefetch" href="/assets/js/56.8b899006.js"><link rel="prefetch" href="/assets/js/57.f7ea6441.js"><link rel="prefetch" href="/assets/js/58.55ca22b7.js"><link rel="prefetch" href="/assets/js/59.3b16a882.js"><link rel="prefetch" href="/assets/js/6.8843ac12.js"><link rel="prefetch" href="/assets/js/60.7365ec6c.js"><link rel="prefetch" href="/assets/js/61.0508510a.js"><link rel="prefetch" href="/assets/js/62.8c3a0bf0.js"><link rel="prefetch" href="/assets/js/63.99503945.js"><link rel="prefetch" href="/assets/js/64.1193b17d.js"><link rel="prefetch" href="/assets/js/65.40a7b476.js"><link rel="prefetch" href="/assets/js/66.c95c74fb.js"><link rel="prefetch" href="/assets/js/67.dcc1ce00.js"><link rel="prefetch" href="/assets/js/68.e8aeba6d.js"><link rel="prefetch" href="/assets/js/69.13b69234.js"><link rel="prefetch" href="/assets/js/7.cda98f34.js"><link rel="prefetch" href="/assets/js/70.2308210c.js"><link rel="prefetch" href="/assets/js/71.bdac7c88.js"><link rel="prefetch" href="/assets/js/72.d5e7dabc.js"><link rel="prefetch" href="/assets/js/73.f1cec72d.js"><link rel="prefetch" href="/assets/js/74.13cbda62.js"><link rel="prefetch" href="/assets/js/75.5ec77696.js"><link rel="prefetch" href="/assets/js/76.e80c98fb.js"><link rel="prefetch" href="/assets/js/77.edf10bf3.js"><link rel="prefetch" href="/assets/js/78.9472aec2.js"><link rel="prefetch" href="/assets/js/79.2f59f6d2.js"><link rel="prefetch" href="/assets/js/8.64e66a3d.js"><link rel="prefetch" href="/assets/js/80.9d9b311d.js"><link rel="prefetch" href="/assets/js/81.112c831f.js"><link rel="prefetch" href="/assets/js/82.e98222ae.js"><link rel="prefetch" href="/assets/js/83.a7741563.js"><link rel="prefetch" href="/assets/js/84.47f9ec86.js"><link rel="prefetch" href="/assets/js/85.4b288089.js"><link rel="prefetch" href="/assets/js/86.d01d1b2a.js"><link rel="prefetch" href="/assets/js/87.26f71539.js"><link rel="prefetch" href="/assets/js/88.0cdca4ad.js"><link rel="prefetch" href="/assets/js/9.8fcc4a9b.js"><link rel="prefetch" href="/assets/js/90.49e1e9ad.js"><link rel="prefetch" href="/assets/js/91.58ec2d07.js"><link rel="prefetch" href="/assets/js/92.0da2a72c.js"><link rel="prefetch" href="/assets/js/93.9d312aaf.js"><link rel="prefetch" href="/assets/js/94.e94db684.js"><link rel="prefetch" href="/assets/js/95.ed2aa34a.js"><link rel="prefetch" href="/assets/js/96.6a2e264d.js"><link rel="prefetch" href="/assets/js/97.8a055f18.js"><link rel="prefetch" href="/assets/js/98.1284385e.js"><link rel="prefetch" href="/assets/js/99.830ddc7a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3ceaf8af.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35477964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="Black House" class="logo"> <span class="site-name">Black House</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>apidoc 教程</span> <!----></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/views/tools/2017/12231022.html#api" class="sidebar-link">@api</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apidefine" class="sidebar-link">@apiDefine</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apidescription" class="sidebar-link">@apiDescription</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apierror" class="sidebar-link">@apiError</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apierrorexample" class="sidebar-link">@apiErrorExample</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiexample" class="sidebar-link">@apiExample</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apigroup" class="sidebar-link">@apiGroup</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiheader" class="sidebar-link">@apiHeader</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiheaderexample" class="sidebar-link">@apiHeaderExample</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiignore" class="sidebar-link">@apiIgnore</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiname" class="sidebar-link">@apiName</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiparam" class="sidebar-link">@apiParam</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiparamexample" class="sidebar-link">@apiParamExample</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apipermission" class="sidebar-link">@apiPermission</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiprivate" class="sidebar-link">@apiPrivate</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apisamplerequest" class="sidebar-link">@apiSampleRequest</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/views/tools/2017/12231022.html#定义-package-json" class="sidebar-link">定义 package.json</a></li></ul></li><li><a href="/views/tools/2017/12231022.html#apisuccessexample" class="sidebar-link">@apiSuccessExample</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiuse" class="sidebar-link">@apiUse</a><ul class="sidebar-sub-headers"></ul></li><li><a href="/views/tools/2017/12231022.html#apiversion" class="sidebar-link">@apiVersion</a><ul class="sidebar-sub-headers"></ul></li></ul></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>apidoc 教程</h1> <hr> <div data-v-0b496ca7><i class="iconfont reco-account" data-v-0b496ca7><span data-v-0b496ca7>dong4j</span></i> <i class="iconfont reco-date" data-v-0b496ca7><span data-v-0b496ca7>12/23/2017</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0b496ca7><span class="tag-item" data-v-0b496ca7>
+      Tools
+    </span></i></div></div> <div class="content__default"><div class="tip custom-block"><p>总结 apidoc 的使用</p></div> <h2 id="api"><a href="#api" aria-hidden="true" class="header-anchor">#</a> @api</h2> <p>被 @api 标记后, 会解析成 api 文档</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@api {method} path [title]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">method</td> <td style="text-align:left;">Request method name: <code>DELETE</code>, <code>GET</code>, <code>POST</code>, <code>PUT</code>, ... More info <a href="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods" target="_blank" rel="noopener noreferrer">Wikipedia HTTP-Request_methods<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></td></tr> <tr><td style="text-align:left;">path</td> <td style="text-align:left;">Request Path.</td></tr> <tr><td style="text-align:left;">titleoptional</td> <td style="text-align:left;">A short title. (used for navigation and article header)</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/:id 获取用户详情
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15139973393075.png" alt=""></p> <h2 id="apidefine"><a href="#apidefine" aria-hidden="true" class="header-anchor">#</a> @apiDefine</h2> <p>用来定义全局描述, 比如服务器内部错误描述, 权限描述等</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiDefine name [title] [description]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">name</td> <td style="text-align:left;">Unique name for the block / value. Same name with different <code>@apiVersion</code> can be defined.</td></tr> <tr><td style="text-align:left;">titleoptional</td> <td style="text-align:left;">A short title. Only used for named functions like <code>@apiPermission</code> or <code>@apiParam (name)</code>.</td></tr> <tr><td style="text-align:left;">descriptionoptional</td> <td style="text-align:left;">Detailed Description start at the next line, multiple lines can be used. Only used for named functions like <code>@apiPermission</code>.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @apiDefine MyError
+ * @apiError UserNotFound The &lt;code&gt;id&lt;/code&gt; of the User was not found.
+ */
+
+/**
+ * @api {get} /user/:id
+ * [下面引入全局定义]
+ * @apiUse MyError
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @apiDefine admin User access only
+ * This optional description belong to to the group admin.
+ */
+
+/**
+ * @api {get} /user/:id
+ * [下面引入全局定义]
+ * @apiPermission admin
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15139977268725.png" alt=""></p> <h2 id="apidescription"><a href="#apidescription" aria-hidden="true" class="header-anchor">#</a> @apiDescription</h2> <p>用于定义接口描述信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiDescription text
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">text</td> <td style="text-align:left;">Multiline description text.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/{id} 获取用户详情
+ * @apiDescription 接口描述信息
+ * 可以有多行
+ * @apiUse MyError
+ * @apiPermission admin
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15139978608501.png" alt=""></p> <h2 id="apierror"><a href="#apierror" aria-hidden="true" class="header-anchor">#</a> @apiError</h2> <p>定义错误的描述信息</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiError [(group)] [{type}] field [description]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">(group)optional</td> <td style="text-align:left;">All parameters will be grouped by this name. Without a group, the default <code>Error 4xx</code> is set.</td></tr> <tr><td style="text-align:left;">{type}optional</td> <td style="text-align:left;">Return type, e.g. <code>{Boolean}</code>, <code>{Number}</code>, <code>{String}</code>,<code>{Object}</code>, <code>{String[]}</code> (array of strings), ...</td></tr> <tr><td style="text-align:left;">field</td> <td style="text-align:left;">Return Identifier (returned error code).</td></tr> <tr><td style="text-align:left;">descriptionoptional</td> <td style="text-align:left;">Description of the field.</td></tr></tbody></table> <h2 id="apierrorexample"><a href="#apierrorexample" aria-hidden="true" class="header-anchor">#</a> @apiErrorExample</h2> <p>错误信息示例</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiErrorExample [{type}] [title] example
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">typeoptional</td> <td style="text-align:left;">Response format.</td></tr> <tr><td style="text-align:left;">titleoptional</td> <td style="text-align:left;">Short title for the example.</td></tr> <tr><td style="text-align:left;">example</td> <td style="text-align:left;">Detailed example, multilines capable.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/{id} 获取用户详情
+ * @apiDescription 接口描述信息
+ * 可以有多行
+ * @apiUse MyError
+ * @apiPermission admin
+ * @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *       &quot;error&quot;: &quot;UserNotFound&quot;
+ *     }
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15139985903647.png" alt=""></p> <h2 id="apiexample"><a href="#apiexample" aria-hidden="true" class="header-anchor">#</a> @apiExample</h2> <p>api 请求示例</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiExample [{type}] title
+            example
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">typeoptional</td> <td style="text-align:left;">Code language.</td></tr> <tr><td style="text-align:left;">title</td> <td style="text-align:left;">Short title for the example.</td></tr> <tr><td style="text-align:left;">example</td> <td style="text-align:left;">Detailed example, multilines capable.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/{id} 获取用户详情
+ * @apiDescription 接口描述信息
+ * 可以有多行
+ * @apiUse MyError
+ * @apiPermission admin
+ * @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *       &quot;error&quot;: &quot;UserNotFound&quot;
+ *     }
+ * @apiExample {curl} Example usage:
+ *     curl -i http://dev.fkhwl.com/fkhtest/api/user/1024
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15139988214861.png" alt=""></p> <h2 id="apigroup"><a href="#apigroup" aria-hidden="true" class="header-anchor">#</a> @apiGroup</h2> <p>定义方法文档块属于哪个组. 组将用于生成输出中的主导航. 结构定义不需要 <code>@apigroup</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiGroup name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">name</td> <td style="text-align:left;">Name of the group. Also used as navigation title.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/{id} 获取用户详情
+ * @apiDescription 接口描述信息
+ * 可以有多行
+ * @apiGroup User
+ * @apiUse MyError
+ * @apiPermission admin
+ * @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *       &quot;error&quot;: &quot;UserNotFound&quot;
+ *     }
+ * @apiExample {curl} Example usage:
+ *     curl -i http://dev.fkhwl.com/fkhtest/api/user/1024
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15139989391085.png" alt=""></p> <h2 id="apiheader"><a href="#apiheader" aria-hidden="true" class="header-anchor">#</a> @apiHeader</h2> <p>描述传递给API头部的参数, 例如用于授权.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiHeader [(group)] [{type}] [field=defaultValue] [description]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Usage: <code>@apiHeader (MyHeaderGroup) {String} authorization Authorization value.</code></p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">(group)optional</td> <td style="text-align:left;">All parameters will be grouped by this name. Without a group, the default <code>Parameter</code> is set.</td></tr> <tr><td style="text-align:left;">You can set a title and description with <a href="http://apidocjs.com/#param-api-define" target="_blank" rel="noopener noreferrer">@apiDefine<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</td> <td style="text-align:left;"></td></tr> <tr><td style="text-align:left;">{type}optional</td> <td style="text-align:left;">Parameter type, e.g. <code>{Boolean}</code>, <code>{Number}</code>, <code>{String}</code>,<code>{Object}</code>, <code>{String[]}</code> (array of strings), ...</td></tr> <tr><td style="text-align:left;">field</td> <td style="text-align:left;">Variablename.</td></tr> <tr><td style="text-align:left;">[field]</td> <td style="text-align:left;">Fieldname with brackets define the Variable as optional.</td></tr> <tr><td style="text-align:left;">=defaultValueoptional</td> <td style="text-align:left;">The parameters default value.</td></tr> <tr><td style="text-align:left;">descriptionoptional</td> <td style="text-align:left;">Description of the field.</td></tr></tbody></table> <p>Examples:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/:id
+ * @apiHeader {String} Content-Type=application/json 浏览器以 json 方式发送数据给服务器
+ * @apiHeader {String} Accept=application/json;charset=UTF-8 浏览器接收 json 数据
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15139997343541.png" alt=""></p> <p>使用 @apiDefine 定义全局 header 描述</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @apiDefine Header
+ * @apiHeader {String} Content-Type=application/json 浏览器以 json 方式发送数据给服务器
+ * @apiHeader {String} Accept=application/json;charset=UTF-8 浏览器接收 json 数据
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>引入 header 描述</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/{id} 获取用户详情
+ * @apiDescription 接口描述信息
+ * 可以有多行
+ * @apiGroup User
+ * @apiUse MyError
+ * @apiPermission admin
+ * @apiUse Header
+ * @apiErrorExample {json} Error-Response:
+ *     HTTP/1.1 404 Not Found
+ *     {
+ *       &quot;error&quot;: &quot;UserNotFound&quot;
+ *     }
+ * @apiExample {curl} Example usage:
+ *     curl -i http://dev.fkhwl.com/fkhtest/api/user/1024
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><h2 id="apiheaderexample"><a href="#apiheaderexample" aria-hidden="true" class="header-anchor">#</a> @apiHeaderExample</h2> <p>header 参数 示例</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiHeaderExample [{type}] [title]
+                   example
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">typeoptional</td> <td style="text-align:left;">Request format.</td></tr> <tr><td style="text-align:left;">titleoptional</td> <td style="text-align:left;">Short title for the example.</td></tr> <tr><td style="text-align:left;">example</td> <td style="text-align:left;">Detailed example, multilines capable.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @apiDefine Header
+ * @apiHeader {String} Content-Type=application/json 浏览器以 json 方式发送数据给服务器
+ * @apiHeader {String} Accept=application/json;charset=UTF-8 浏览器接收 json 数据
+ * @apiHeaderExample {json} Header-Example:
+ *     {
+ *       &quot;Content-Type&quot;: &quot;Content-Type:application/json&quot;,
+ *       &quot;Accept&quot;: &quot;Accept:application/json;charset=UTF-8&quot;
+ *     }
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15140000386529.png" alt=""></p> <h2 id="apiignore"><a href="#apiignore" aria-hidden="true" class="header-anchor">#</a> @apiIgnore</h2> <p>用于定义未完成的接口描述, 不会被显示出来
+<strong>必须在 @api 之前定义</strong></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiIgnore [hint]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Usage: <code>@apiIgnore Not finished Method</code></p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">hintoptional</td> <td style="text-align:left;">Short information why this block should be ignored.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @apiIgnore Not finished Method
+ * @api {get} /user/:id
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="apiname"><a href="#apiname" aria-hidden="true" class="header-anchor">#</a> @apiName</h2> <p>定义方法文档块的名称. 将在生成的输出中使用子导航名. 结构定义不需要 <code>@apiName</code>.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiName name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">name</td> <td style="text-align:left;">Unique name of the method. Same name with different <code>@apiVersion</code> can be defined. Format: <em>method</em> + <em>path</em> (e.g. Get + User), only a proposal, you can name as you want.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/:id
+ * @apiName GetUser
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="apiparam"><a href="#apiparam" aria-hidden="true" class="header-anchor">#</a> @apiParam</h2> <p>描述传递给API方法的参数</p> <p>Usage: <code>@apiParam (MyGroup) {Number} id Users unique ID.</code></p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">(group)optional</td> <td style="text-align:left;">可定义一个 group ,用于抽象出公共的参数 ()表示可以不用定义 group</td></tr> <tr><td style="text-align:left;">{type}optional</td> <td style="text-align:left;">参数类型</td></tr> <tr><td style="text-align:left;">{type{size}}optional</td> <td style="text-align:left;">参数长度 <code>{string{..5}}</code> <code>{string{2..5}}</code> <code>{number{100-999}}</code></td></tr> <tr><td style="text-align:left;">{type=allowedValues}optional</td> <td style="text-align:left;">参数允许的值 <code>{string=&quot;small&quot;}</code> <code>{string {..5}=&quot;small&quot;,&quot;huge&quot;}</code> <code>{number=1,2,3,99}</code></td></tr> <tr><td style="text-align:left;">field</td> <td style="text-align:left;">字段名称</td></tr> <tr><td style="text-align:left;">[field=defaultValueoptional]</td> <td style="text-align:left;">参数默认值 (有一个默认标识) [] 标识有一个可选标识</td></tr> <tr><td style="text-align:left;">descriptionoptional</td> <td style="text-align:left;">字段描述</td></tr></tbody></table> <p>Examples:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/:id
+ * @apiParam {Number} id Users unique ID.
+ */
+
+/**
+ * @api {post} /user/
+ * @apiParam {String} [firstname]  Optional Firstname of the User.
+ * @apiParam {String} lastname     Mandatory Lastname.
+ * @apiParam {String} country=&quot;DE&quot; Mandatory with default value &quot;DE&quot;.
+ * @apiParam {Number} [age=18]     Optional Age with default 18.
+ *
+ * @apiParam (Login) {String} pass Only logged in users can post this.
+ *                                 In generated documentation a separate
+ *                                 &quot;Login&quot; Block will be generated.
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15140011041403.png" alt=""></p> <h2 id="apiparamexample"><a href="#apiparamexample" aria-hidden="true" class="header-anchor">#</a> @apiParamExample</h2> <p>请求参数示例</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiParamExample [{type}] [title]
+                   example
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">typeoptional</td> <td style="text-align:left;">Request format.</td></tr> <tr><td style="text-align:left;">titleoptional</td> <td style="text-align:left;">Short title for the example.</td></tr> <tr><td style="text-align:left;">example</td> <td style="text-align:left;">Detailed example, multilines capable.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/:id
+ * @apiParamExample {json} Request-Example:
+ *     {
+ *       &quot;id&quot;: 4711
+ *     }
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15140012673322.png" alt=""></p> <h2 id="apipermission"><a href="#apipermission" aria-hidden="true" class="header-anchor">#</a> @apiPermission</h2> <p>定义接口权限</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiPermission name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">name</td> <td style="text-align:left;">Unique name of the permission.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/:id
+ * @apiPermission none
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h2 id="apiprivate"><a href="#apiprivate" aria-hidden="true" class="header-anchor">#</a> @apiPrivate</h2> <p>将API定义为私有的, 允许创建两个API规范文档: 一个不包含私有api, 另一个包含它们.</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiPrivate
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Usage: <code>@apiPrivate</code></p> <p>Command line usage to exclude/include private APIs: <code>--private false|true</code></p> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/:id
+ * @apiPrivate
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p>默认不显示私有接口</p> <p>如果需要包含私有接口 使用一下命令</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>apidoc -i . -o apidoc/  --private true
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h2 id="apisamplerequest"><a href="#apisamplerequest" aria-hidden="true" class="header-anchor">#</a> @apiSampleRequest</h2> <p>定义是否显示接口调用相关部分
+在与apidoc.json配置参数 [ sampleurl ]结合使用此参数</p> <ol><li>如果在 <code>apidoc.json</code> 定义了 <code>sampleUrl</code>, 全部的 api 都会有一个测试表单</li> <li>如果没有定义 <code>sampleUrl</code> 字段, 只有标识了 <code>@apiSampleRequest</code> 的接口才会有测试表单</li> <li>如果定义了 <code>sampleUrl</code> 字段, api 中也有 <code>@apiSampleRequest url</code>, 且 url 已 http 开头, 则 api 的 url 会覆盖全局的 <code>sampleUrl</code></li> <li></li> <li>如果定义了 <code>sampleUrl</code> 字段, 但是某个 api 不需要测试表单, 则可以使用 <code>@apiSampleRequest off</code></li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiSampleRequest url
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><h3 id="定义-package-json"><a href="#定义-package-json" aria-hidden="true" class="header-anchor">#</a> 定义 package.json</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>{
+  &quot;name&quot;: &quot;fkh-api&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;description&quot;: &quot;fkh-api 接口文档&quot;,
+  &quot;apidoc&quot;: {
+    &quot;title&quot;: &quot;&quot;,
+    &quot;url&quot; : &quot;&quot;,
+    &quot;sampleUrl&quot;:&quot;http://dev.fkhwl.com/fkhtest/api&quot;
+  }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><p>所有 api 都会出现 测试表单</p> <p><img src="http://qiniu.dong4j.info/2019-07-02-15140022993913.png" alt=""></p> <p>同时定义测试 url, 且 <code>@apiSampleRequest</code> 已 http 开头, 则会覆盖 <code>sampleUrl</code></p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiSampleRequest http://127.0.0.1/fkhtest/api/user
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15140024558860.png" alt=""></p> <p>如果 <code>@apiSampleRequest</code> 只是定义 URI, 则会组合 apiSampleRequest 和 sampleUrl, 生成最终的 测试地址</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiSampleRequest /user
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15140026068631.png" alt=""></p> <h2 id="apisuccessexample"><a href="#apisuccessexample" aria-hidden="true" class="header-anchor">#</a> @apiSuccessExample</h2> <p>定义正确的返回结果</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiSuccessExample [{type}] [title]
+                   example
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">typeoptional</td> <td style="text-align:left;">Response format.</td></tr> <tr><td style="text-align:left;">titleoptional</td> <td style="text-align:left;">Short title for the example.</td></tr> <tr><td style="text-align:left;">example</td> <td style="text-align:left;">Detailed example, multilines capable.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @apiDefine CODE_200 调用成功
+ * @apiSuccess (Reponse 200) {number} code 200
+ * @apiSuccess (Reponse 200) {json} [data='&quot;&quot;']
+ * @apiSuccessExample {json} Response 200 Example
+ *   HTTP/1.1 200 OK
+ *   {
+ *     &quot;rescode&quot;: 1200,
+ * 		&quot;message&quot;: &quot;操作成功&quot;,
+ * 		&quot;timestamp&quot;: 1513920968552
+ *   }
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><p><img src="http://qiniu.dong4j.info/2019-07-02-15140031295851.png" alt=""></p> <h2 id="apiuse"><a href="#apiuse" aria-hidden="true" class="header-anchor">#</a> @apiUse</h2> <p>定义 使用 <code>@apiDefine</code> 定义的全局定义</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiUse name
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Usage: <code>@apiUse MySuccess</code></p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">name</td> <td style="text-align:left;">Name of the defined block.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @apiDefine MySuccess
+ * @apiSuccess {string} firstname The users firstname.
+ * @apiSuccess {number} age The users age.
+ */
+
+/**
+ * @api {get} /user/:id
+ * @apiUse MySuccess
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="apiversion"><a href="#apiversion" aria-hidden="true" class="header-anchor">#</a> @apiVersion</h2> <p>定义 api 版本, 可用于对比不同的版本变化</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>@apiVersion version
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>Usage: <code>@apiVersion 1.6.2</code></p> <table><thead><tr><th style="text-align:left;">Name</th> <th style="text-align:left;">Description</th></tr></thead> <tbody><tr><td style="text-align:left;">version</td> <td style="text-align:left;">Simple versioning supported (major.minor.patch). More info on <a href="http://semver.org/" target="_blank" rel="noopener noreferrer">Semantic Versioning Specification (SemVer)<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a>.</td></tr></tbody></table> <p>Example:</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>/**
+ * @api {get} /user/{id}
+ * @apiVersion 1.6.2
+ */
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><p><strong>历史版本需要拷贝的 -apidoc.js 文件中</strong></p></div> <!----> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/3/2019, 6:17:56 PM</span></div></footer> <!----> </main> <div class="valine-wrapper" data-v-0162251c><div id="valine" data-v-0162251c></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-d0bfeaa4 data-v-d0bfeaa4><i class="iconfont reco-up" data-v-d0bfeaa4></i></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.23d4d300.js" defer></script><script src="/assets/js/4.28fd9624.js" defer></script><script src="/assets/js/1.928d15b1.js" defer></script><script src="/assets/js/89.fca9f86b.js" defer></script>
+  </body>
+</html>

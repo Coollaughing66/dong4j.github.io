@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>用 Python 自动给老婆发邮件 | Black House</title>
+    <meta name="description" content="代码千万行, 注释第一行, 编码不规范, 同事两行泪.">
+    <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    
+    <link rel="preload" href="/assets/css/0.styles.35477964.css" as="style"><link rel="preload" href="/assets/js/app.23d4d300.js" as="script"><link rel="preload" href="/assets/js/4.28fd9624.js" as="script"><link rel="preload" href="/assets/js/1.928d15b1.js" as="script"><link rel="preload" href="/assets/js/80.9d9b311d.js" as="script"><link rel="prefetch" href="/assets/js/10.c2349238.js"><link rel="prefetch" href="/assets/js/100.031b764c.js"><link rel="prefetch" href="/assets/js/11.597103f4.js"><link rel="prefetch" href="/assets/js/12.01e326a5.js"><link rel="prefetch" href="/assets/js/13.6937eabc.js"><link rel="prefetch" href="/assets/js/14.0e95ab13.js"><link rel="prefetch" href="/assets/js/15.43c0e778.js"><link rel="prefetch" href="/assets/js/16.8c75ae64.js"><link rel="prefetch" href="/assets/js/17.02d12878.js"><link rel="prefetch" href="/assets/js/18.6b597676.js"><link rel="prefetch" href="/assets/js/19.524d893b.js"><link rel="prefetch" href="/assets/js/20.11686f52.js"><link rel="prefetch" href="/assets/js/21.ad025f0d.js"><link rel="prefetch" href="/assets/js/22.dca96777.js"><link rel="prefetch" href="/assets/js/23.121a28ab.js"><link rel="prefetch" href="/assets/js/24.99537c05.js"><link rel="prefetch" href="/assets/js/25.8f31fa14.js"><link rel="prefetch" href="/assets/js/26.a121c6cc.js"><link rel="prefetch" href="/assets/js/27.a57ec579.js"><link rel="prefetch" href="/assets/js/28.3f009b45.js"><link rel="prefetch" href="/assets/js/29.9c269e5b.js"><link rel="prefetch" href="/assets/js/30.168f09f3.js"><link rel="prefetch" href="/assets/js/31.ed454542.js"><link rel="prefetch" href="/assets/js/32.5f77ac76.js"><link rel="prefetch" href="/assets/js/33.3b921274.js"><link rel="prefetch" href="/assets/js/34.2e2dd8bc.js"><link rel="prefetch" href="/assets/js/35.457382a4.js"><link rel="prefetch" href="/assets/js/36.097474f8.js"><link rel="prefetch" href="/assets/js/37.2914dab3.js"><link rel="prefetch" href="/assets/js/38.bd900eff.js"><link rel="prefetch" href="/assets/js/39.00b0bb76.js"><link rel="prefetch" href="/assets/js/40.6d5aae82.js"><link rel="prefetch" href="/assets/js/41.e00929aa.js"><link rel="prefetch" href="/assets/js/42.b0c12805.js"><link rel="prefetch" href="/assets/js/43.7a60ce77.js"><link rel="prefetch" href="/assets/js/44.adf74ab9.js"><link rel="prefetch" href="/assets/js/45.36b6b8e2.js"><link rel="prefetch" href="/assets/js/46.a254f56a.js"><link rel="prefetch" href="/assets/js/47.aec9ad68.js"><link rel="prefetch" href="/assets/js/48.e3477ba7.js"><link rel="prefetch" href="/assets/js/49.5d974cde.js"><link rel="prefetch" href="/assets/js/5.c7e63593.js"><link rel="prefetch" href="/assets/js/50.c71471a2.js"><link rel="prefetch" href="/assets/js/51.de15920e.js"><link rel="prefetch" href="/assets/js/52.1eabf9c1.js"><link rel="prefetch" href="/assets/js/53.ada4082c.js"><link rel="prefetch" href="/assets/js/54.985c146e.js"><link rel="prefetch" href="/assets/js/55.33da5078.js"><link rel="prefetch" href="/assets/js/56.8b899006.js"><link rel="prefetch" href="/assets/js/57.f7ea6441.js"><link rel="prefetch" href="/assets/js/58.55ca22b7.js"><link rel="prefetch" href="/assets/js/59.3b16a882.js"><link rel="prefetch" href="/assets/js/6.8843ac12.js"><link rel="prefetch" href="/assets/js/60.7365ec6c.js"><link rel="prefetch" href="/assets/js/61.0508510a.js"><link rel="prefetch" href="/assets/js/62.8c3a0bf0.js"><link rel="prefetch" href="/assets/js/63.99503945.js"><link rel="prefetch" href="/assets/js/64.1193b17d.js"><link rel="prefetch" href="/assets/js/65.40a7b476.js"><link rel="prefetch" href="/assets/js/66.c95c74fb.js"><link rel="prefetch" href="/assets/js/67.dcc1ce00.js"><link rel="prefetch" href="/assets/js/68.e8aeba6d.js"><link rel="prefetch" href="/assets/js/69.13b69234.js"><link rel="prefetch" href="/assets/js/7.cda98f34.js"><link rel="prefetch" href="/assets/js/70.2308210c.js"><link rel="prefetch" href="/assets/js/71.bdac7c88.js"><link rel="prefetch" href="/assets/js/72.d5e7dabc.js"><link rel="prefetch" href="/assets/js/73.f1cec72d.js"><link rel="prefetch" href="/assets/js/74.13cbda62.js"><link rel="prefetch" href="/assets/js/75.5ec77696.js"><link rel="prefetch" href="/assets/js/76.e80c98fb.js"><link rel="prefetch" href="/assets/js/77.edf10bf3.js"><link rel="prefetch" href="/assets/js/78.9472aec2.js"><link rel="prefetch" href="/assets/js/79.2f59f6d2.js"><link rel="prefetch" href="/assets/js/8.64e66a3d.js"><link rel="prefetch" href="/assets/js/81.112c831f.js"><link rel="prefetch" href="/assets/js/82.e98222ae.js"><link rel="prefetch" href="/assets/js/83.a7741563.js"><link rel="prefetch" href="/assets/js/84.47f9ec86.js"><link rel="prefetch" href="/assets/js/85.4b288089.js"><link rel="prefetch" href="/assets/js/86.d01d1b2a.js"><link rel="prefetch" href="/assets/js/87.26f71539.js"><link rel="prefetch" href="/assets/js/88.0cdca4ad.js"><link rel="prefetch" href="/assets/js/89.fca9f86b.js"><link rel="prefetch" href="/assets/js/9.8fcc4a9b.js"><link rel="prefetch" href="/assets/js/90.49e1e9ad.js"><link rel="prefetch" href="/assets/js/91.58ec2d07.js"><link rel="prefetch" href="/assets/js/92.0da2a72c.js"><link rel="prefetch" href="/assets/js/93.9d312aaf.js"><link rel="prefetch" href="/assets/js/94.e94db684.js"><link rel="prefetch" href="/assets/js/95.ed2aa34a.js"><link rel="prefetch" href="/assets/js/96.6a2e264d.js"><link rel="prefetch" href="/assets/js/97.8a055f18.js"><link rel="prefetch" href="/assets/js/98.1284385e.js"><link rel="prefetch" href="/assets/js/99.830ddc7a.js"><link rel="prefetch" href="/assets/js/vendors~flowchart.3ceaf8af.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.35477964.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div><div class="theme-container"><div><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/head.png" alt="Black House" class="logo"> <span class="site-name">Black House</span></a> <div class="links"><div class="color-picker"><a href="#" class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="theme-options"><!----> <div class="dark-theme-options toggle-option"><label for="dark-theme-toggle">Enable Dark Theme?</label> <input id="dark-theme-toggle" type="checkbox" checked="checked"></div></div></div></div> <div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/category/Design.html" class="nav-link"><i class="iconfont undefined"></i>
+  Design
+</a></li><li class="dropdown-item"><!----> <a href="/category/Framework.html" class="nav-link"><i class="iconfont undefined"></i>
+  Framework
+</a></li><li class="dropdown-item"><!----> <a href="/category/Spring.html" class="nav-link"><i class="iconfont undefined"></i>
+  Spring
+</a></li><li class="dropdown-item"><!----> <a href="/category/Issue.html" class="nav-link"><i class="iconfont undefined"></i>
+  Issue
+</a></li><li class="dropdown-item"><!----> <a href="/category/Java.html" class="nav-link"><i class="iconfont undefined"></i>
+  Java
+</a></li><li class="dropdown-item"><!----> <a href="/category/Mac.html" class="nav-link"><i class="iconfont undefined"></i>
+  Mac
+</a></li><li class="dropdown-item"><!----> <a href="/category/Other.html" class="nav-link"><i class="iconfont undefined"></i>
+  Other
+</a></li><li class="dropdown-item"><!----> <a href="/category/Middleware.html" class="nav-link"><i class="iconfont undefined"></i>
+  Middleware
+</a></li><li class="dropdown-item"><!----> <a href="/category/NoSQL.html" class="nav-link"><i class="iconfont undefined"></i>
+  NoSQL
+</a></li><li class="dropdown-item"><!----> <a href="/category/Python.html" class="nav-link"><i class="iconfont undefined"></i>
+  Python
+</a></li><li class="dropdown-item"><!----> <a href="/category/Tools.html" class="nav-link"><i class="iconfont undefined"></i>
+  Tools
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeLine/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/dong4j" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>用 Python 自动给老婆发邮件</span> <!----></p> <!----></section></li></ul> </aside> <div><main class="page reco-hide"> <div class="page-title"><h1>用 Python 自动给老婆发邮件</h1> <hr> <div data-v-0b496ca7><i class="iconfont reco-account" data-v-0b496ca7><span data-v-0b496ca7>dong4j</span></i> <i class="iconfont reco-date" data-v-0b496ca7><span data-v-0b496ca7>9/24/2016</span></i> <!----> <i class="iconfont reco-tag tags" data-v-0b496ca7><span class="tag-item" data-v-0b496ca7>
+      Python
+    </span></i></div></div> <div class="content__default"><div class="tip custom-block"><p>Python 面向对象基础部分</p></div> <p>中秋在家没事,写了一个很久以前就想写的脚本</p> <p>如果下午6点10分还连接着公司的wifi,就发邮件给老婆说要加班</p> <p>为什么要发邮件而不发短信呢,因为短信接口要钱....
+最近买了个4k的显示器,拿来外接mac看代码,爽翻了,不过有点蛮烦的就是每次都要拖动鼠标到另一个屏幕上去,不过全国最大的同性交友网站 GitHub上面有一款开源的软件叫<code>CatchMouse</code>解决了这个问题</p> <p>下载地址: <a href="http://https://github.com/ROUND/CatchMouse" target="_blank" rel="noopener noreferrer">CatchMouse<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <p>另一个问题是如果想把软件从mac屏幕放到外接显示屏的话,还是要拖过去,但是....
+另一款神器Moon能帮我们快速的把当前应用移动到外接显示器上,</p> <p><img src="http://qiniu.dong4j.info/2019-07-04-2016-09-17-22-49-07.jpg" alt="2016-09-17-22-49-07"></p> <p>光标定位到需要移动的app上,快捷键 contro+` 即可</p> <p>接下来是脚本</p> <p>我的思路是:</p> <p>先检测当前连接的是哪里的 wifi
+如果是公司的 wifi,且当前时间大于6点10分,则给老婆发送邮件
+如果连接的是家里的 wifi,则检测是否连接了外接显示器,
+如果连接了,则检测是否开启了 CatchMouse.app, 没有则打开.</p> <p>接下来开始撸代码:</p> <div class="language-python line-numbers-mode"><pre class="language-python"><code><span class="token comment"># Created by: dong4j</span>
+<span class="token comment"># Date: 2016-09-16</span>
+<span class="token comment"># Time: 05:17</span>
+<span class="token comment"># Description: 检查连接的wifi,如果是家里的,检查是否连接外接显示器</span>
+<span class="token comment"># 如果连接了,则启动CatchMouse.app,切换音频输出到外接显示器</span>
+<span class="token comment"># 如果连接公司的wifi,则检测6点10分是否还是连接的公司wifi</span>
+<span class="token comment"># 如果是,则发送邮件给老婆,说要加班</span>
+
+<span class="token comment"># coding=utf-8</span>
+<span class="token keyword">import</span> socket
+<span class="token keyword">import</span> subprocess
+<span class="token keyword">import</span> datetime
+<span class="token keyword">import</span> smtplib
+<span class="token keyword">import</span> time
+<span class="token keyword">from</span> email<span class="token punctuation">.</span>mime<span class="token punctuation">.</span>text <span class="token keyword">import</span> MIMEText
+<span class="token keyword">from</span> email<span class="token punctuation">.</span>header <span class="token keyword">import</span> Header
+
+mail_host <span class="token operator">=</span> <span class="token string">&quot;smtp.163.com&quot;</span>
+mail_user <span class="token operator">=</span> <span class="token string">&quot;用户名&quot;</span>
+mail_pass <span class="token operator">=</span> <span class="token string">&quot;密码&quot;</span>
+mail_postfix <span class="token operator">=</span> <span class="token string">&quot;163.com&quot;</span>
+log_dir <span class="token operator">=</span> <span class="token string">&quot;smartlife.log&quot;</span>
+
+<span class="token comment"># 全局变量,标识是否已经发送过邮件</span>
+global_flag <span class="token operator">=</span> <span class="token boolean">True</span>
+
+<span class="token keyword">def</span> <span class="token function">whereami</span><span class="token punctuation">(</span>flag<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    myname <span class="token operator">=</span> socket<span class="token punctuation">.</span>getfqdn<span class="token punctuation">(</span>socket<span class="token punctuation">.</span>gethostname<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    save_log<span class="token punctuation">(</span>myname<span class="token punctuation">)</span>
+    myaddr <span class="token operator">=</span> socket<span class="token punctuation">.</span>gethostbyname<span class="token punctuation">(</span>myname<span class="token punctuation">)</span>
+    <span class="token comment"># 家里有一个极路由和一个小米路由器,所以有2个网段</span>
+    count_spring <span class="token operator">=</span> myaddr<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">&quot;192.168.31.&quot;</span><span class="token punctuation">)</span>
+    count_hiwifi <span class="token operator">=</span> myaddr<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">&quot;192.168.199.&quot;</span><span class="token punctuation">)</span>
+    <span class="token comment"># 您阿姐任意一个则表示连接的是家里的wifi</span>
+    <span class="token keyword">if</span> count_hiwifi <span class="token operator">+</span> count_spring <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
+        save_log<span class="token punctuation">(</span><span class="token string">&quot;家里的wifi&quot;</span><span class="token punctuation">)</span>
+        <span class="token comment"># 调用检查外接显示器的方法</span>
+        display<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        save_log<span class="token punctuation">(</span><span class="token string">&quot;公司的wifi&quot;</span><span class="token punctuation">)</span>
+        now_time <span class="token operator">=</span> datetime<span class="token punctuation">.</span>datetime<span class="token punctuation">.</span>now<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        save_log<span class="token punctuation">(</span><span class="token string">&quot;当前小时是 %s&quot;</span> <span class="token operator">%</span> now_time<span class="token punctuation">.</span>hour<span class="token punctuation">)</span>
+        save_log<span class="token punctuation">(</span><span class="token string">&quot;当前分钟是 %s&quot;</span> <span class="token operator">%</span> now_time<span class="token punctuation">.</span>minute<span class="token punctuation">)</span>
+        <span class="token keyword">if</span> now_time<span class="token punctuation">.</span>hour <span class="token operator">==</span> <span class="token number">18</span> <span class="token keyword">and</span> now_time<span class="token punctuation">.</span>minute <span class="token operator">&gt;=</span> <span class="token number">10</span> <span class="token keyword">and</span> flag<span class="token punctuation">:</span>
+            send_mail<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'269321381@qq.com'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token string">'来自老公的邮件'</span><span class="token punctuation">,</span> <span class="token string">&quot;老婆 我要加班,你先吃&quot;</span><span class="token punctuation">)</span>
+            <span class="token keyword">global</span> global_flag
+            global_flag <span class="token operator">=</span> <span class="token boolean">False</span>
+            <span class="token comment"># exit()</span>
+
+<span class="token keyword">def</span> <span class="token function">display</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token comment"># 使用shell 命令检查是否连接了外接显示器,如果有两个DisplayProductID,则表示连接外接显示器,还可以使用 system_profiler SPDisplaysDataType | grep Resolution </span>
+    out_bytes <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>check_output<span class="token punctuation">(</span><span class="token string">&quot;ioreg -l | grep 'DisplayProductID'&quot;</span><span class="token punctuation">,</span> shell <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+    str1 <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>out_bytes<span class="token punctuation">,</span> encoding <span class="token operator">=</span> <span class="token string">&quot;utf-8&quot;</span><span class="token punctuation">)</span>
+    count <span class="token operator">=</span> str1<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">&quot;DisplayProductID&quot;</span><span class="token punctuation">)</span>
+    str2 <span class="token operator">=</span> <span class="token builtin">str</span><span class="token punctuation">(</span>subprocess<span class="token punctuation">.</span>check_output<span class="token punctuation">(</span><span class="token string">&quot;ps -ef | grep CatchMouse.app | grep -v grep | awk '{ print $2 }'&quot;</span><span class="token punctuation">,</span> shell <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+               encoding <span class="token operator">=</span> <span class="token string">&quot;utf-8&quot;</span><span class="token punctuation">)</span>
+    save_log<span class="token punctuation">(</span><span class="token string">&quot;CatchMouse.app pid: &quot;</span> <span class="token operator">+</span> str2<span class="token punctuation">)</span>
+    <span class="token comment"># 如果你有多个显示器,这里要修改为你自己的显示器个数</span>
+    <span class="token keyword">if</span> count <span class="token operator">==</span> <span class="token number">2</span> <span class="token keyword">and</span> str2 <span class="token operator">==</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">:</span>
+        save_log<span class="token punctuation">(</span><span class="token string">&quot;开启CatchMouse&quot;</span><span class="token punctuation">)</span>
+        retcode <span class="token operator">=</span> subprocess<span class="token punctuation">.</span>call<span class="token punctuation">(</span><span class="token string">&quot;open -a CatchMouse.app&quot;</span><span class="token punctuation">,</span> shell <span class="token operator">=</span> <span class="token boolean">True</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> retcode <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            log <span class="token operator">=</span> <span class="token string">&quot; 开启CatchMouse.app成功&quot;</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            log <span class="token operator">=</span> <span class="token string">&quot; 开启CatchMouse.app失败&quot;</span>
+        save_log<span class="token punctuation">(</span>log<span class="token punctuation">)</span>
+
+<span class="token comment"># 发送邮件</span>
+<span class="token keyword">def</span> <span class="token function">send_mail</span><span class="token punctuation">(</span>to_list<span class="token punctuation">,</span> title<span class="token punctuation">,</span> context<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    me <span class="token operator">=</span> mail_user <span class="token operator">+</span> <span class="token string">&quot;&lt;&quot;</span> <span class="token operator">+</span> mail_user <span class="token operator">+</span> <span class="token string">&quot;@&quot;</span> <span class="token operator">+</span> mail_postfix <span class="token operator">+</span> <span class="token string">&quot;&gt;&quot;</span>
+    msg <span class="token operator">=</span> MIMEText<span class="token punctuation">(</span>context<span class="token punctuation">,</span> <span class="token string">'plain'</span><span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+    msg<span class="token punctuation">[</span><span class="token string">'Subject'</span><span class="token punctuation">]</span> <span class="token operator">=</span> Header<span class="token punctuation">(</span>title<span class="token punctuation">,</span> <span class="token string">'utf-8'</span><span class="token punctuation">)</span>
+    msg<span class="token punctuation">[</span><span class="token string">'From'</span><span class="token punctuation">]</span> <span class="token operator">=</span> me
+    msg<span class="token punctuation">[</span><span class="token string">'To'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">&quot;;&quot;</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>to_list<span class="token punctuation">)</span>
+    <span class="token keyword">try</span><span class="token punctuation">:</span>
+        s <span class="token operator">=</span> smtplib<span class="token punctuation">.</span>SMTP<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        s<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>mail_host<span class="token punctuation">)</span>
+        s<span class="token punctuation">.</span>login<span class="token punctuation">(</span>mail_user<span class="token punctuation">,</span> mail_pass<span class="token punctuation">)</span>
+        s<span class="token punctuation">.</span>sendmail<span class="token punctuation">(</span>me<span class="token punctuation">,</span> to_list<span class="token punctuation">,</span> msg<span class="token punctuation">.</span>as_string<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        s<span class="token punctuation">.</span>quit<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        save_log<span class="token punctuation">(</span><span class="token string">&quot;邮件发送成功&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword">except</span> Exception <span class="token keyword">as</span> e<span class="token punctuation">:</span>
+        save_log<span class="token punctuation">(</span><span class="token builtin">str</span><span class="token punctuation">(</span>e<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 保存log</span>
+<span class="token keyword">def</span> <span class="token function">save_log</span><span class="token punctuation">(</span>log_str<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    write_log <span class="token operator">=</span> <span class="token builtin">open</span><span class="token punctuation">(</span>log_dir<span class="token punctuation">,</span> <span class="token string">'a'</span><span class="token punctuation">)</span>
+    log <span class="token operator">=</span> <span class="token string">'[%s]--&gt; %s\n'</span> <span class="token operator">%</span> <span class="token punctuation">(</span>time<span class="token punctuation">.</span>strftime<span class="token punctuation">(</span><span class="token string">'%Y-%m-%d %H:%M:%S'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> log_str<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>log<span class="token punctuation">)</span>
+    write_log<span class="token punctuation">.</span>write<span class="token punctuation">(</span>log<span class="token punctuation">)</span>
+    write_log<span class="token punctuation">.</span>close<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        whereami<span class="token punctuation">(</span>global_flag<span class="token punctuation">)</span>
+        time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br><span class="line-number">14</span><br><span class="line-number">15</span><br><span class="line-number">16</span><br><span class="line-number">17</span><br><span class="line-number">18</span><br><span class="line-number">19</span><br><span class="line-number">20</span><br><span class="line-number">21</span><br><span class="line-number">22</span><br><span class="line-number">23</span><br><span class="line-number">24</span><br><span class="line-number">25</span><br><span class="line-number">26</span><br><span class="line-number">27</span><br><span class="line-number">28</span><br><span class="line-number">29</span><br><span class="line-number">30</span><br><span class="line-number">31</span><br><span class="line-number">32</span><br><span class="line-number">33</span><br><span class="line-number">34</span><br><span class="line-number">35</span><br><span class="line-number">36</span><br><span class="line-number">37</span><br><span class="line-number">38</span><br><span class="line-number">39</span><br><span class="line-number">40</span><br><span class="line-number">41</span><br><span class="line-number">42</span><br><span class="line-number">43</span><br><span class="line-number">44</span><br><span class="line-number">45</span><br><span class="line-number">46</span><br><span class="line-number">47</span><br><span class="line-number">48</span><br><span class="line-number">49</span><br><span class="line-number">50</span><br><span class="line-number">51</span><br><span class="line-number">52</span><br><span class="line-number">53</span><br><span class="line-number">54</span><br><span class="line-number">55</span><br><span class="line-number">56</span><br><span class="line-number">57</span><br><span class="line-number">58</span><br><span class="line-number">59</span><br><span class="line-number">60</span><br><span class="line-number">61</span><br><span class="line-number">62</span><br><span class="line-number">63</span><br><span class="line-number">64</span><br><span class="line-number">65</span><br><span class="line-number">66</span><br><span class="line-number">67</span><br><span class="line-number">68</span><br><span class="line-number">69</span><br><span class="line-number">70</span><br><span class="line-number">71</span><br><span class="line-number">72</span><br><span class="line-number">73</span><br><span class="line-number">74</span><br><span class="line-number">75</span><br><span class="line-number">76</span><br><span class="line-number">77</span><br><span class="line-number">78</span><br><span class="line-number">79</span><br><span class="line-number">80</span><br><span class="line-number">81</span><br><span class="line-number">82</span><br><span class="line-number">83</span><br><span class="line-number">84</span><br><span class="line-number">85</span><br><span class="line-number">86</span><br><span class="line-number">87</span><br><span class="line-number">88</span><br><span class="line-number">89</span><br><span class="line-number">90</span><br><span class="line-number">91</span><br><span class="line-number">92</span><br><span class="line-number">93</span><br><span class="line-number">94</span><br><span class="line-number">95</span><br><span class="line-number">96</span><br></div></div><p>脚本完成了
+受到 <a href="http://http://blog.jobbole.com/95222/" target="_blank" rel="noopener noreferrer">超过90秒的任务不自动化,你好意思说自己是黑客？<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> 这篇文章的启发,所有有了这个脚本</p> <p>灵感来源于生活.......</p></div> <!----> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">Last Updated: </span> <span class="time">7/4/2019, 1:15:31 PM</span></div></footer> <!----> </main> <div class="valine-wrapper" data-v-0162251c><div id="valine" data-v-0162251c></div></div></div> <div class="back-to-ceiling" style="right:1rem;bottom:3rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;background-color:rgba(231, 234, 241,.5);display:none;" data-v-d0bfeaa4 data-v-d0bfeaa4><i class="iconfont reco-up" data-v-d0bfeaa4></i></div></div></div></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.23d4d300.js" defer></script><script src="/assets/js/4.28fd9624.js" defer></script><script src="/assets/js/1.928d15b1.js" defer></script><script src="/assets/js/80.9d9b311d.js" defer></script>
+  </body>
+</html>
